@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>化学 一問一答</title>
+<style>
+:root{--bg:#f5f4ef;--card:#fff;--ink:#1d2a2e;--mute:#66767b;--line:#dedbd1;--acc:#0f766e;--on:#fff;--ok:#15803d;--okb:#e6f4ea;--ng:#b42318;--ngb:#fdeceb;--bl:#fff1bf;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181a;--card:#1b2427;--ink:#e8eeef;--mute:#92a4a9;--line:#2c383c;--acc:#2dd4bf;--on:#04201d;--ok:#4ade80;--okb:#14301f;--ng:#f87171;--ngb:#3a1b1b;--bl:#4a3d12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12181a;--card:#1b2427;--ink:#e8eeef;--mute:#92a4a9;--line:#2c383c;--acc:#2dd4bf;--on:#04201d;--ok:#4ade80;--okb:#14301f;--ng:#f87171;--ngb:#3a1b1b;--bl:#4a3d12;color-scheme:dark}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Hiragino Sans","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;touch-action:manipulation}
+[hidden]{display:none!important}
+main{max-width:640px;margin:0 auto;padding:20px 16px 24px}
+h1{font-size:22px;margin:4px 0 2px}h2{font-size:16px;margin:20px 0 4px}
+.sub{color:var(--mute);font-size:13px;margin:0 0 16px}
+button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:12px 16px;min-height:46px}
+button.p{background:var(--acc);color:var(--on);border-color:var(--acc);font-weight:700}
+button:disabled{opacity:.4}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tg{display:flex;gap:8px;align-items:center;margin:0 0 12px;font-size:14px}
+.tg input{width:20px;height:20px;accent-color:var(--acc)}
+.unit{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0 0;cursor:pointer}
+.unit input{width:22px;height:22px;accent-color:var(--acc);flex:none}
+.unit b{display:block;font-size:15px;line-height:1.4}
+.unit small{color:var(--mute);font-size:12px}
+.unit .n{margin-left:auto;color:var(--mute);font-size:13px;white-space:nowrap}
+.bar{position:sticky;bottom:0;background:var(--bg);margin-top:12px;padding:12px 0 calc(12px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:12px;border-top:1px solid var(--line)}
+.bar div{flex:1;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:12px 0}
+.chip{display:inline-block;font-size:12px;color:var(--acc);border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin-bottom:10px}
+.q{font-size:18px;line-height:1.9;margin:0}
+.bk{display:inline-block;min-width:4.5em;border-bottom:2px solid var(--acc);background:var(--bl);border-radius:4px;padding:0 6px;text-align:center}
+.bk.ok{background:var(--okb);color:var(--ok);border-color:var(--ok);font-weight:700}
+.bk.ng{background:var(--ngb);color:var(--ng);border-color:var(--ng);font-weight:700}
+#ans{display:block;width:100%;font:inherit;font-size:16px;padding:14px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);margin:4px 0 12px;outline:none}
+#ans:focus{border-color:var(--acc)}#ans[readonly]{opacity:.6}
+.fb{border-radius:12px;padding:12px 14px;margin:0 0 12px}
+.fb.ok{background:var(--okb);color:var(--ok)}.fb.ng{background:var(--ngb);color:var(--ng)}
+.fb p{margin:2px 0;color:var(--ink);font-size:15px}
+.prog{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin-top:12px}
+.prog i{display:block;height:100%;background:var(--acc);width:0;transition:width .3s}
+.stat{display:flex;justify-content:space-between;color:var(--mute);font-size:13px;margin:8px 0}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.g div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;font-size:12px;color:var(--mute)}
+.g b{display:block;font-size:26px;color:var(--ink)}
+.kb{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:0 0 6px}
+.kb button{padding:0;min-height:44px;font-size:18px;border-radius:10px;user-select:none;-webkit-user-select:none}
+.hint{color:var(--mute);font-size:12px;margin:0 0 12px}
+</style></head><body><main>
+
+<section id="s1">
+<h1>化学 一問一答</h1>
+<p class="sub">答えをキーボードで入力。正解した問題は出ません。間違い・わからないは、あとでまた出ます。</p>
+<label class="tg"><input type="checkbox" id="rnd" checked>最初の出題順をランダムにする</label>
+<div class="row"><button id="all">全選択</button><button id="none">全解除</button></div>
+<div id="list"></div>
+<div class="bar"><div id="cnt"></div><button class="p" id="go">スタート</button></div>
+</section>
+
+<section id="s2" hidden>
+<div class="row"><button id="back">← 範囲選択</button></div>
+<div class="prog"><i id="pb"></i></div>
+<div class="stat"><span id="st1"></span><span id="st2"></span></div>
+<div class="card"><span class="chip" id="chip"></span><p class="q" id="qt"></p></div>
+<div class="fb" id="fb" hidden></div>
+<input id="ans" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="go">
+<div class="kb" id="kb"></div>
+<p class="hint">化学式用キー。H2O のように普通の数字で打っても正解になります。</p>
+<div class="row" id="b1"><button class="p" id="ok" style="flex:1">答える</button><button id="dk">わからない</button></div>
+<div class="row" id="b2" hidden><button class="p" id="nx" style="flex:1">次へ</button><button id="ov">正解にする</button></div>
+</section>
+
+<section id="s3" hidden>
+<h1>おつかれさま!</h1>
+<div id="rs"></div>
+<div class="row" style="margin-top:16px"><button class="p" id="again" style="flex:1">同じ範囲でもう一度</button><button id="re">範囲を選び直す</button></div>
+</section>
+</main>
+<script>
+const DATA=[{"t":"水素・酸素・貴ガス・酸化物","p":"1/34ページ・p.94","qs":[{"q":"水素H2は無色・無臭の気体で、すべての気体の中で最も【 】。","a":"軽い","s":0,"m":0},{"q":"水素は水に溶けにくいので、【 】で捕集する。","a":"水上置換","s":0,"m":0},{"q":"水素とほかの元素との化合物を【 】という。","a":"水素化合物","s":0,"m":0},{"q":"15〜17族の元素は水素と【 】結合により分子をつくる。","a":"共有","s":0,"m":0},{"q":"18族に属するHe, Ne, Ar, Kr, Xe, Rnを【 】という。","a":"貴ガス","s":0,"m":0},{"q":"貴ガスの価電子の数は【 】個。","a":"0","s":0,"m":0},{"q":"酸素O2は、実験室では【 】水に触媒として少量の酸化マンガン(IV)を加えて得る。","a":"過酸化水素","s":0,"m":0},{"q":"酸素O2のほかオゾンO3のように、同じ元素からなる単体で性質の異なる物質を互いに【 】という。","a":"同素体","s":0,"m":0},{"q":"オゾンO3は【 】色で、特異臭のある有毒な気体である。","a":"淡青","s":0,"m":0},{"q":"オゾンは強い【 】作用を示す。","a":"酸化","s":0,"m":0},{"q":"オゾンは、水で湿らせた【 】紙を青紫色に変えることで検出できる。","a":"ヨウ化カリウムデンプン","s":0,"m":0},{"q":"SiO2, P4O10, SO3, Cl2O7など、水と反応して酸を生じたり塩基と反応して塩を生じたりする非金属元素の酸化物を【 】という。","a":"酸性酸化物","s":0,"m":0},{"q":"Na2OやMgOなど、水と反応して塩基を生じたり酸と反応して塩を生じたりする金属元素の酸化物を【 】という。","a":"塩基性酸化物","s":0,"m":0},{"q":"Al2O3やZnOのように、酸とも塩基とも反応して塩を生じる酸化物を【 】という。","a":"両性酸化物","s":0,"m":0},{"q":"分子中に酸素原子を含む酸を【 】という。","a":"オキソ酸","s":0,"m":0},{"q":"同一元素のオキソ酸では、中心原子に結合する酸素原子の数が多いほど、酸性は【 】くなる。","a":"強","s":0,"m":0}]},{"t":"ハロゲン","p":"3/34ページ","qs":[{"q":"周期表の【 】族に属するF, Cl, Br, I, Atは何と呼ばれる?(①の答え)","a":"17","s":0,"m":0},{"q":"周期表の17族に属するF, Cl, Br, I, Atを【 】という。","a":"ハロゲン","s":0,"m":0},{"q":"ハロゲンの単体の融点や沸点は、原子番号が大きいほど【 】い。","a":"高","s":0,"m":0},{"q":"ハロゲンは多くの化合物と反応して【 】をつくりやすい。","a":"ハロゲン化物","s":0,"m":0},{"q":"塩素Cl2は刺激臭をもつ【 】色の有毒な気体で、空気より重い。","a":"黄緑","s":0,"m":0},{"q":"塩素は水に溶け、一部が水と反応して塩化水素HClと【 】を生じる。","a":"次亜塩素酸HClO","s":0,"m":0},{"q":"臭素Br2は常温で【 】色である。","a":"赤褐","s":0,"m":0},{"q":"臭素Br2は常温で【 】体で、有毒な蒸気を発生する。","a":"液","s":0,"m":0},{"q":"ヨウ素I2は常温で【 】性をもつ。","a":"昇華","s":0,"m":0},{"q":"ヨウ素I2は【 】色の固体である。","a":"黒紫","s":0,"m":0},{"q":"ヨウ素はヨウ化カリウム水溶液に溶けて褐色の【 】水溶液となる。","a":"ヨウ素ヨウ化カリウム","s":0,"m":0},{"q":"ヨウ素水溶液がデンプン水溶液と反応して青紫色を示す反応を【 】といい、デンプンの検出に用いる。","a":"ヨウ素デンプン反応","s":0,"m":0},{"q":"ハロゲンの単体と水素を反応させると【 】を生じる。","a":"ハロゲン化水素","s":0,"m":0},{"q":"ハロゲン化水素のうち、水溶液だけが弱酸であるのは【 】。","a":"フッ化水素HF","s":0,"m":0},{"q":"塩化水素HClは、塩化ナトリウムに濃硫酸を加えて加熱し、【 】により捕集する。","a":"下方置換","s":0,"m":0},{"q":"塩化水素HClの水溶液を【 】という。","a":"塩酸","s":0,"m":0},{"q":"濃塩酸が試薬びんの栓を開けると白煙を生じるような性質を【 】という。","a":"発煙性","s":0,"m":0},{"q":"塩化水素とアンモニアが反応すると【 】の白煙を生じる。(反応の検出に利用)","a":"塩化アンモニウムNH4Cl","s":0,"m":0},{"q":"フッ化水素HFは、他のハロゲン化水素に比べて沸点が比較的【 】い。","a":"高","s":0,"m":0},{"q":"フッ化水素HFの水溶液は【 】である。","a":"弱酸","s":0,"m":0},{"q":"塩素を水酸化カルシウムに吸収させて得られる【 】の主成分がCaCl(ClO)・H2Oである。","a":"さらし粉","s":0,"m":0}]},{"t":"硫黄","p":"5/34ページ","qs":[{"q":"硫黄は周期表の【 】族に属し、原子は6個の価電子をもつ。","a":"16","s":0,"m":0},{"q":"硫黄は多くの元素と化合物(=【 】)をつくり、地殻中に鉱物として多量に存在する。","a":"硫化物","s":0,"m":0},{"q":"硫黄の単体には同素体が存在する。その3つを答えよ(順不同)。","a":"斜方硫黄、単斜硫黄、ゴム状硫黄","s":0,"m":1},{"q":"硫化水素H2Sは実験室では【 】に希硫酸または希塩酸を加えて発生させる。","a":"硫化鉄(II)FeS","s":0,"m":0},{"q":"硫化水素は無色で【 】臭の有毒な気体である。","a":"腐卵","s":0,"m":0},{"q":"二酸化硫黄SO2は、銅に【 】を作用させても得られる。","a":"熱濃硫酸","s":0,"m":0},{"q":"二酸化硫黄は水に溶けると【 】を生じ、弱い酸性を示す。","a":"亜硫酸H2SO3","s":0,"m":0},{"q":"SO2やH2SO3には【 】作用があり、紙や繊維などの漂白剤に用いられる。","a":"還元","s":0,"m":0},{"q":"二酸化硫黄は通常【 】剤としてはたらく。","a":"還元","s":0,"m":0},{"q":"二酸化硫黄は、硫化水素のような強い還元剤に対しては【 】剤としてはたらき、硫黄の単体が遊離する。","a":"酸化","s":0,"m":0},{"q":"硫酸は工業的には【 】法によってつくられる。","a":"接触","s":0,"m":0},{"q":"接触法で、二酸化硫黄を【 】を触媒として空気中の酸素で酸化する。","a":"酸化バナジウム(V)V2O5","s":0,"m":0},{"q":"接触法で二酸化硫黄を酸化して得られる物質は【 】。","a":"三酸化硫黄SO3","s":0,"m":0},{"q":"三酸化硫黄を濃硫酸に吸収させたものを【 】という。","a":"発煙硫酸","s":0,"m":0},{"q":"濃硫酸は沸点が高く、【 】性の酸である。","a":"不揮発","s":0,"m":0},{"q":"濃硫酸は【 】が高く、中性・酸性気体の乾燥剤に用いられる。","a":"吸湿性","s":0,"m":0},{"q":"濃硫酸が水素と酸素を有機化合物からH:O=2:1の割合で奪う作用を【 】作用という。","a":"脱水","s":0,"m":0},{"q":"熱濃硫酸は強い【 】作用をもち、銅や銀などを溶かしてSO2を発生する。","a":"酸化","s":0,"m":0},{"q":"希硫酸は電離度が大きく強い【 】性を示す。","a":"酸","s":0,"m":0}]},{"t":"窒素・リン","p":"7/34ページ","qs":[{"q":"窒素N2は、工業的には液体空気の【 】で得られる。","a":"分留","s":0,"m":0},{"q":"窒素は-196℃で凝縮し、【 】は冷却剤として用いられる。","a":"液体窒素","s":0,"m":0},{"q":"アンモニアNH3は、【 】で捕集する。","a":"上方置換","s":0,"m":0},{"q":"濃塩酸を付けたガラス棒を近づけると、塩化アンモニウムの【 】を生じることで検出される。","a":"白煙","s":0,"m":0},{"q":"アンモニアは工業的には【 】法によってつくられる。","a":"ハーバー・ボッシュ","s":0,"m":0},{"q":"アンモニアの水溶液は弱い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"一酸化窒素NOは水に溶けにくい【 】色の気体である。","a":"無","s":0,"m":0},{"q":"実験室では、銅に【 】を反応させると一酸化窒素が発生する。","a":"希硝酸","s":0,"m":0},{"q":"一酸化窒素は【 】で捕集する。","a":"水上置換","s":0,"m":0},{"q":"一酸化窒素は空気中ですみやかに酸化され【 】となる。","a":"二酸化窒素","s":0,"m":0},{"q":"二酸化窒素NO2は水に溶けやすい【 】色の有毒な気体である。","a":"赤褐","s":0,"m":0},{"q":"実験室では、銅に【 】を反応させると二酸化窒素が発生する。","a":"濃硝酸","s":0,"m":0},{"q":"二酸化窒素は【 】で捕集する。","a":"下方置換","s":0,"m":0},{"q":"硝酸HNO3は、工業的には【 】法でつくられる。","a":"オストワルト","s":0,"m":0},{"q":"オストワルト法で、アンモニアを【 】を触媒として酸化する。","a":"白金Pt","s":0,"m":0},{"q":"アンモニアを酸化して得られる、空気中の酸素でさらに酸化して二酸化窒素にする物質は【 】。","a":"一酸化窒素NO","s":0,"m":0},{"q":"リンの単体には黄リンや赤リンなどの【 】が存在する。","a":"同素体","s":0,"m":0},{"q":"黄リンは空気中で自然発火するので【 】中に保存する。","a":"水","s":0,"m":0},{"q":"リンを空気中で燃焼させると【 】になる。","a":"十酸化四リンP4O10","s":0,"m":0},{"q":"十酸化四リンは吸湿性が強く、強力な【 】として用いられる。","a":"乾燥剤","s":0,"m":0},{"q":"十酸化四リンに水を加え加熱すると、徐々に反応して【 】になる。","a":"リン酸H3PO4","s":0,"m":0}]},{"t":"炭素・ケイ素","p":"9/34ページ","qs":[{"q":"炭素の単体にはダイヤモンドや黒鉛などの【 】がある。","a":"同素体","s":1,"m":0},{"q":"一酸化炭素COは、炭素または炭素化合物の【 】や、二酸化炭素と高温の炭素の接触により生成する。","a":"不完全燃焼","s":1,"m":0},{"q":"実験室では、【 】を濃硫酸とともに加熱し、脱水すると一酸化炭素が得られる。","a":"ギ酸HCOOH","s":1,"m":0},{"q":"COは高温でほかの物質から酸素を奪ってCO2に変わりやすい性質(=【 】)があり、金属の製錬などに利用される。","a":"還元性(還元作用)","s":1,"m":0},{"q":"実験室で二酸化炭素を発生させる石灰石の主成分は【 】。","a":"炭酸カルシウムCaCO3","s":1,"m":0},{"q":"二酸化炭素は水に少し溶けて、水溶液は弱い【 】性を示す。","a":"酸","s":1,"m":0},{"q":"二酸化炭素を【 】に通じると、炭酸カルシウムの沈殿を生じて白濁する。","a":"石灰水","s":1,"m":0},{"q":"二酸化炭素の固体は【 】と呼ばれ、冷却剤として利用される。","a":"ドライアイス","s":1,"m":0},{"q":"ケイ素Siは、地殻中に【 】の次に多く存在する。","a":"酸素","s":1,"m":0},{"q":"ケイ素は自然界には単体で存在せず、酸化物を【 】してつくる。","a":"還元","s":1,"m":0},{"q":"ケイ素の単体はダイヤモンドと同じ構造の【 】結合の結晶を形成する。","a":"共有","s":1,"m":0},{"q":"ケイ素の単体は、電気伝導性が金属と非金属の中間で、【 】の性質を示す。","a":"半導体","s":1,"m":0},{"q":"二酸化ケイ素は、ケイ素原子の周囲に【 】個の酸素原子が共有結合でつながる。","a":"4","s":1,"m":0},{"q":"二酸化ケイ素の組成式は【 】である。","a":"SiO2","s":1,"m":0},{"q":"高純度の二酸化ケイ素を融解して繊維状にしたものは【 】と呼ばれる。","a":"光ファイバー","s":1,"m":0},{"q":"二酸化ケイ素を水酸化ナトリウムや炭酸ナトリウムとともに加熱すると【 】を生じる。","a":"ケイ酸ナトリウム","s":1,"m":0},{"q":"二酸化ケイ素を塩基と反応させて得られる化合物を【 】という。","a":"ケイ酸塩","s":1,"m":0},{"q":"ケイ酸ナトリウムに水を加えて加熱すると得られる、無色透明で粘性の大きな液体を【 】という。","a":"水ガラス","s":1,"m":0},{"q":"水ガラスの水溶液に塩酸を加えると生成する白色ゲル状沈殿は【 】。","a":"ケイ酸","s":1,"m":0},{"q":"ケイ酸を加熱して脱水すると【 】になる。(多孔質で乾燥剤・吸着剤に利用)","a":"シリカゲル","s":1,"m":0}]},{"t":"アルカリ金属・ナトリウム化合物","p":"11/34ページ・p.104","qs":[{"q":"周期表の1族元素のうち、Hを除くLi, Na, K, Rb, Cs, Frの6種類を【 】という。","a":"アルカリ金属","s":0,"m":0},{"q":"工業的には、アルカリ金属の化合物を高温で融解して電気分解(=【 】)し単体を得る。","a":"溶融塩電解","s":0,"m":0},{"q":"アルカリ金属の単体は、融点が【 】い。","a":"低","s":0,"m":0},{"q":"アルカリ金属の単体や化合物は、特有の【 】反応を示す。","a":"炎色","s":0,"m":0},{"q":"アルカリ金属の単体は【 】力が強く、常温の水と激しく反応する。","a":"還元","s":0,"m":0},{"q":"アルカリ金属が常温の水と反応すると【 】を発生し、水酸化物を生じる。","a":"水素","s":0,"m":0},{"q":"水酸化ナトリウムNaOHの水溶液は強い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"水酸化ナトリウムの固体が空気中の水分を吸収して溶ける現象を【 】という。","a":"潮解","s":0,"m":0},{"q":"水酸化ナトリウムは空気中の二酸化炭素を吸収して【 】に変化する。","a":"炭酸ナトリウムNa2CO3","s":0,"m":0},{"q":"炭酸ナトリウムNa2CO3の水溶液は【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"炭酸ナトリウム十水和物を空気中に放置すると水和水の一部を失い、白色粉末状の【 】となる。","a":"炭酸ナトリウム一水和物Na2CO3·H2O","s":0,"m":0},{"q":"結晶が水和水を失って粉末になる現象を【 】という。","a":"風解","s":0,"m":0},{"q":"炭酸ナトリウムは工業的には【 】法でつくられる。","a":"アンモニアソーダ(ソルベー)","s":0,"m":0},{"q":"塩化ナトリウム飽和水溶液にアンモニアと二酸化炭素を吹き込むと沈殿するのは【 】。","a":"炭酸水素ナトリウムNaHCO3","s":0,"m":0},{"q":"炭酸水素ナトリウムNaHCO3の別名は【 】。","a":"重曹","s":0,"m":0},{"q":"炭酸水素ナトリウムの水溶液は弱い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"炭酸水素ナトリウムは強酸を加えたり加熱したりすると分解して【 】を発生する。","a":"二酸化炭素CO2","s":0,"m":0}]},{"t":"2族元素・カルシウム化合物","p":"13/34ページ・p.106","qs":[{"q":"周期表の2族元素は【 】と呼ばれる。(ベリリウム・マグネシウムは除く場合もある)","a":"アルカリ土類金属","s":0,"m":0},{"q":"2族元素の原子は【 】個の価電子をもつ。","a":"2","s":0,"m":0},{"q":"2族元素は、同周期のアルカリ金属に比べて融点は【 】い。","a":"高","s":0,"m":0},{"q":"Ca, Sr, Baは常温の水と反応して【 】を発生する。","a":"水素","s":0,"m":0},{"q":"Ca, Sr, Baは水と反応して強【 】性の水酸化物になる。","a":"塩基","s":0,"m":0},{"q":"マグネシウムMgは、常温の水とはほとんど反応せず、【 】とは反応する。","a":"熱水","s":0,"m":0},{"q":"酸化カルシウムCaOの別名は【 】。","a":"生石灰","s":0,"m":0},{"q":"酸化カルシウムは水と反応して発熱するため、【 】剤や発熱剤などに用いられる。","a":"乾燥","s":0,"m":0},{"q":"水酸化カルシウムCa(OH)2の別名は【 】。","a":"消石灰","s":0,"m":0},{"q":"水酸化カルシウムは水に少し溶けて強い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"水酸化カルシウムの飽和水溶液を【 】という。","a":"石灰水","s":0,"m":0},{"q":"石灰水に二酸化炭素を吹き込むと炭酸カルシウムの【 】色沈殿を生じる。","a":"白","s":0,"m":0},{"q":"さらに二酸化炭素を吹き込むと、生じた炭酸カルシウムは【 】となって溶解する。","a":"炭酸水素カルシウムCa(HCO3)2","s":0,"m":0},{"q":"CO2を含んだ水が石灰岩を徐々に浸食してできる大きな洞窟を【 】という。","a":"鍾乳洞","s":0,"m":0},{"q":"炭酸カルシウムは塩酸などの強酸と反応して【 】を発生する。","a":"二酸化炭素CO2","s":0,"m":0},{"q":"塩化カルシウムCaCl2は融雪剤や【 】剤などに用いられる。","a":"乾燥","s":0,"m":0},{"q":"硫酸カルシウム二水和物CaSO4·2H2Oの天然の産出名(=【 】)","a":"セッコウ","s":0,"m":0},{"q":"セッコウを加熱すると、水和水の一部を失い、硫酸カルシウム半水和物CaSO4·1/2H2O(【 】)となる。","a":"焼きセッコウ","s":0,"m":0},{"q":"硫酸バリウムBaSO4は、X線の吸収力が大きいので、胃や腸のX線撮影の【 】に用いられる。","a":"造影剤","s":0,"m":0}]},{"t":"アルミニウム・スズ","p":"15/34ページ・p.108","qs":[{"q":"アルミニウムAlは周期表の【 】族に属する。","a":"13","s":1,"m":0},{"q":"Alの原子は【 】個の価電子をもち、(②)価の陽イオンになりやすい。","a":"3","s":1,"m":0},{"q":"アルミニウムは、工業的には原料鉱石の【 】を精製して得られる酸化アルミニウムから製造する。","a":"ボーキサイト","s":1,"m":0},{"q":"アルミナAl2O3を【 】とともに(⑤)して製造する。(④に入る物質)","a":"氷晶石","s":1,"m":0},{"q":"アルミナを氷晶石とともに【 】して、アルミニウムを製造する。","a":"溶融塩電解(融解塩電解)","s":1,"m":0},{"q":"アルミニウムは、表面の緻密な酸化被膜が内部を保護するため濃硝酸にも溶けない。この状態を【 】という。","a":"不動態","s":1,"m":0},{"q":"アルミニウムの表面に人工的に厚い酸化被膜をつけた製品を【 】という。","a":"アルマイト","s":1,"m":0},{"q":"Al粉末とFe2O3の混合物に点火し、Alの還元力を利用して金属の単体を得る方法を【 】法という。","a":"テルミット","s":1,"m":0},{"q":"アルミニウムは酸や強塩基の水溶液と反応するので【 】である。","a":"両性金属","s":1,"m":0},{"q":"アルミニウムは酸や強塩基の水溶液と反応して【 】を発生する。","a":"水素","s":1,"m":0},{"q":"アルミニウムと少量の銅、マグネシウムなどとの合金を【 】といい、航空機の機体などに利用される。","a":"ジュラルミン","s":1,"m":0},{"q":"酸化アルミニウムAl2O3の別名は【 】。","a":"アルミナ","s":1,"m":0},{"q":"酸化アルミニウムは、酸や強塩基の水溶液にも反応して溶ける【 】である。","a":"両性酸化物","s":1,"m":0},{"q":"Al3+を含む水溶液に塩基を加えると生じる白色ゲル状の沈殿は【 】。","a":"水酸化アルミニウムAl(OH)3","s":1,"m":0},{"q":"水酸化アルミニウムは、酸や強塩基の水溶液には溶けるがアンモニア水には溶けない【 】である。","a":"両性水酸化物","s":1,"m":0},{"q":"硫酸カリウムアルミニウム十二水和物AlK(SO4)2·12H2Oを【 】という。","a":"ミョウバン","s":1,"m":0},{"q":"ミョウバンのように、2種類以上の塩が一定の割合で結合した形で表せ、それぞれの成分イオンがそのまま存在する塩を【 】という。","a":"複塩","s":1,"m":0},{"q":"スズの単体は【 】で、酸・強塩基のいずれの水溶液にも溶ける。","a":"両性金属","s":1,"m":0},{"q":"スズめっき鋼板を【 】という。","a":"ブリキ","s":1,"m":0},{"q":"スズと銅との合金(=【 】)","a":"青銅","s":1,"m":0},{"q":"スズと銀・銅との合金(=【 】)","a":"鉛フリーはんだ","s":1,"m":0}]},{"t":"遷移元素・鉄","p":"17/34ページ・p.110","qs":[{"q":"遷移元素の単体は密度が大きく、融点が【 】いものが多い。","a":"高","s":1,"m":0},{"q":"遷移元素は1つの元素が複数の酸化数をとることが多く、イオンや化合物には【 】色のものが多い。","a":"有","s":1,"m":0},{"q":"中心となる金属イオンに【 】をもつ分子や陰イオンが配位結合してできたイオンを(④)という。(③に入る語)","a":"非共有電子対","s":1,"m":0},{"q":"金属イオンに非共有電子対をもつ分子や陰イオンが配位結合してできたイオンを【 】という。","a":"錯イオン","s":1,"m":0},{"q":"非共有電子対を与えて配位結合する分子や陰イオンを【 】という。","a":"配位子","s":1,"m":0},{"q":"配位子の数を【 】という。","a":"配位数","s":1,"m":0},{"q":"鉄の単体は、塩酸・希硫酸には【 】を発生しながら溶け、鉄(II)イオンとなる。","a":"水素","s":1,"m":0},{"q":"鉄は濃硝酸には【 】となるため、溶解しない。","a":"不動態","s":1,"m":0},{"q":"鉄とクロム、ニッケルの合金(=【 】)はさびにくい。","a":"ステンレス鋼","s":1,"m":0},{"q":"鉄を湿った空気中に放置すると酸化され、酸化鉄(III)水和物を生じる。これが鉄の【 】である。","a":"赤さび","s":1,"m":0},{"q":"鉄を強熱すると四酸化三鉄を生じる。これが鉄の【 】である。","a":"黒さび","s":1,"m":0},{"q":"鉄を希硫酸に溶かした水溶液を濃縮すると、【 】色の硫酸鉄(II)七水和物FeSO4·7H2Oが得られる。","a":"淡緑","s":1,"m":0}]},{"t":"銅・銀","p":"19/34ページ","qs":[{"q":"銅Cuは、多くは【 】(主成分CuFeS2)などの化合物として産出する。","a":"黄銅鉱","s":1,"m":0},{"q":"工業的には、銅の単体は【 】で得られる。(粗銅を純銅にする方法)","a":"電解精錬","s":1,"m":0},{"q":"銅は湿った空気中では徐々に緑色のさび(=【 】)を生じる。","a":"緑青","s":1,"m":0},{"q":"銅と亜鉛の合金を【 】という。","a":"黄銅(真ちゅう)","s":1,"m":0},{"q":"銅とスズの合金を【 】という。","a":"青銅(ブロンズ)","s":1,"m":0},{"q":"銅は塩酸や希硫酸には溶けないが、酸化力のある【 】や熱濃硫酸に溶ける。","a":"硝酸","s":1,"m":0},{"q":"銅を空気中で加熱すると、1000℃以下では黒色の【 】を生成する。","a":"酸化銅(II)CuO","s":1,"m":0},{"q":"1000℃以上では、赤色の【 】を生成する。","a":"酸化銅(I)Cu2O","s":1,"m":0},{"q":"硫酸銅(II)の水溶液から結晶を析出させると、【 】の青色結晶が得られる。","a":"硫酸銅(II)五水和物CuSO4·5H2O","s":1,"m":0},{"q":"この結晶を150℃以上に加熱すると、水和水をすべて失って白色粉末状の【 】となる。","a":"硫酸銅(II)(無水物)CuSO4","s":1,"m":0},{"q":"Cu2+を含む水溶液に塩基の水溶液を加えると、【 】の青白色沈殿を生じる。","a":"水酸化銅(II)Cu(OH)2","s":1,"m":0},{"q":"水酸化銅(II)を加熱すると、黒色の【 】になる。","a":"酸化銅(II)CuO","s":1,"m":0},{"q":"水酸化銅(II)の沈殿に過剰量のアンモニア水を加えると、溶解して【 】色の溶液となる。","a":"深青","s":1,"m":0},{"q":"Cu2+を含む水溶液に硫化水素を通じると、【 】の黒色沈殿を生成する。","a":"硫化銅(II)CuS","s":1,"m":0},{"q":"銀の単体は空気中で酸化されにくく、【 】や熱の伝導性は金属中で最大である。","a":"電気伝導性","s":1,"m":0},{"q":"硝酸銀は光によって分解して銀を遊離する性質(=【 】)があるため、褐色びんに保存する。","a":"感光性","s":1,"m":0},{"q":"銀イオンはハロゲン化物イオンと反応して【 】を生じる。","a":"ハロゲン化銀","s":1,"m":0},{"q":"ハロゲン化銀のうち、水に溶けるのは【 】。","a":"フッ化銀AgF","s":1,"m":0},{"q":"アンモニア水には【 】はよく溶ける。","a":"塩化銀AgCl","s":1,"m":0},{"q":"臭化銀は【 】水溶液に溶ける。","a":"チオ硫酸ナトリウムNa2S2O3","s":1,"m":0}]},{"t":"亜鉛・クロム・マンガン","p":"21/34ページ・22/34ページ","qs":[{"q":"亜鉛の単体は【 】で、酸、強塩基の水溶液と反応して水素を発生する。","a":"両性金属","s":0,"m":0},{"q":"亜鉛と銅の合金を【 】という。","a":"黄銅","s":0,"m":0},{"q":"亜鉛めっき鋼板を【 】という。","a":"トタン","s":0,"m":0},{"q":"酸化亜鉛ZnOは、酸、強塩基の水溶液と反応する【 】である。","a":"両性酸化物","s":0,"m":0},{"q":"Zn2+を含む水溶液に少量の塩基を加えると、【 】の白色ゲル状沈殿を生じる。","a":"水酸化亜鉛Zn(OH)2","s":0,"m":0},{"q":"水酸化亜鉛は【 】で、酸、強塩基の水溶液と反応して溶ける。","a":"両性水酸化物","s":0,"m":0},{"q":"Zn2+を含む水溶液に中性または塩基性で硫化水素を吹き込むと、【 】の白色沈殿が生成する。","a":"硫化亜鉛ZnS","s":0,"m":0},{"q":"クロムCrの単体は空気中では【 】となり酸化被膜をつくるので、酸化されにくい。","a":"不動態","s":0,"m":0},{"q":"クロム酸カリウムK2CrO4は【 】色の結晶である。","a":"黄","s":0,"m":0},{"q":"クロム酸イオンCrO4^2-を含む水溶液を酸性にすると【 】が生じる。","a":"二クロム酸イオンCr2O7^2-","s":0,"m":0},{"q":"二クロム酸イオンを生じて【 】色になる。","a":"橙赤","s":0,"m":0},{"q":"二クロム酸カリウムK2Cr2O7は【 】色の結晶である。","a":"橙赤","s":0,"m":0},{"q":"二クロム酸カリウムは、硫酸で酸性にした水溶液中では強い【 】作用を示す。","a":"酸化","s":0,"m":0},{"q":"二クロム酸カリウムが酸化作用を示すと【 】(暗緑色)を生じる。","a":"クロム(III)イオンCr3+","s":0,"m":0},{"q":"CrO4^2-はAg+と反応して【 】(暗赤色)の沈殿を生じる。","a":"クロム酸銀Ag2CrO4","s":0,"m":0},{"q":"CrO4^2-はPb2+と反応して【 】(黄色)の沈殿を生じる。","a":"クロム酸鉛(II)PbCrO4","s":0,"m":0},{"q":"CrO4^2-はBa2+と反応して【 】(黄色)の沈殿を生じる。","a":"クロム酸バリウムBaCrO4","s":0,"m":0},{"q":"酸化マンガン(IV)MnO2は【 】色の粉末で水に溶けない。","a":"黒褐","s":0,"m":0},{"q":"MnO2は乾電池(正極活物質)に使われるほか、過酸化水素水から酸素を発生させるなど、多くの反応の【 】に用いられる。","a":"触媒","s":0,"m":0},{"q":"過マンガン酸カリウムKMnO4は黒紫色の結晶で、水に溶けて【 】色の過マンガン酸イオンMnO4^-を生じる。","a":"赤紫","s":0,"m":0},{"q":"KMnO4は硫酸酸性にした水溶液中で、強い【 】作用を示す。","a":"酸化","s":0,"m":0}]},{"t":"金属イオンの沈殿・系統分離","p":"24/34ページ・p.117","qs":[{"q":"Na+, K+などのアルカリ金属のイオンは、いかなる試薬とも沈殿をつくらないので、【 】によって検出する。","a":"炎色反応","s":0,"m":0},{"q":"Ag+, Pb2+を含む水溶液に希塩酸を加えると、Ag+の白色沈殿は【 】。","a":"AgCl","s":0,"m":0},{"q":"同じくPb2+の白色沈殿は【 】。","a":"PbCl2","s":0,"m":0},{"q":"PbCl2は【 】に溶ける。","a":"熱水","s":0,"m":0},{"q":"ZnSは【 】色の沈殿。","a":"白","s":0,"m":0},{"q":"FeSは【 】色の沈殿。","a":"黒","s":0,"m":0},{"q":"Cu2+に硫化水素を通じると生じる黒色沈殿は【 】。","a":"CuS","s":0,"m":0},{"q":"Ag+に硫化水素を通じると生じる黒色沈殿は【 】。","a":"Ag2S","s":0,"m":0},{"q":"PbSは【 】色の沈殿。","a":"黒","s":0,"m":0},{"q":"Al3+に塩基を加えると生じる白色沈殿は【 】。","a":"Al(OH)3","s":0,"m":0},{"q":"Zn2+に塩基を加えると生じる白色沈殿は【 】。","a":"Zn(OH)2","s":0,"m":0},{"q":"Fe2+に塩基を加えると生じる緑白色沈殿は【 】。","a":"Fe(OH)2","s":0,"m":0},{"q":"Fe3+ + 3OH^- → 【 】 + H2O","a":"FeO(OH)","s":0,"m":0},{"q":"FeO(OH)は【 】色の沈殿。","a":"赤褐","s":0,"m":0},{"q":"Cu2+ + 2OH^- → 【 】","a":"Cu(OH)2","s":0,"m":0},{"q":"Cu(OH)2は【 】色の沈殿。","a":"青白","s":0,"m":0},{"q":"2Ag+ + 2OH^- → 【 】 + H2O","a":"Ag2O","s":0,"m":0},{"q":"Ag2Oは【 】色の沈殿。","a":"褐","s":0,"m":0},{"q":"Al(OH)3 + OH^- → 【 】 (過剰のNaOH水溶液で溶ける錯イオン)","a":"[Al(OH)4]^-","s":0,"m":0},{"q":"Zn(OH)2 + 2OH^- → 【 】","a":"[Zn(OH)4]^2-","s":0,"m":0},{"q":"Zn(OH)2 + 4NH3 → 【 】 + 2OH^-","a":"[Zn(NH3)4]^2+","s":0,"m":0},{"q":"Cu(OH)2 + 4NH3 → 【 】 + 2OH^-","a":"[Cu(NH3)4]^2+","s":0,"m":0},{"q":"Ag2O + H2O + 4NH3 → 2【 】 + 2OH^-","a":"[Ag(NH3)2]^+","s":0,"m":0},{"q":"FeO(OH)は過剰のNaOH水溶液にも、過剰のNH3水にも溶け【 】。","a":"ない","s":0,"m":0},{"q":"アルカリ土類金属イオンを含む水溶液は、炭酸イオンと反応して、CaCO3, BaCO3などの炭酸塩の【 】色の沈殿を生成する。","a":"白","s":0,"m":0},{"q":"これらの沈殿は強酸に溶け、【 】を発生する。","a":"二酸化炭素CO2","s":0,"m":0},{"q":"Ca2+に希硫酸を加えると生じる白色沈殿は【 】。","a":"CaSO4","s":0,"m":0},{"q":"Ba2+に希硫酸を加えると生じる白色沈殿は【 】。","a":"BaSO4","s":0,"m":0},{"q":"Pb2+に希硫酸を加えると生じる白色沈殿は【 】。","a":"PbSO4","s":0,"m":0},{"q":"何種類かの金属イオンの混合水溶液から、各金属イオンを分離し、その種類を確認する操作を金属イオンの【 】という。","a":"系統分離","s":0,"m":0}]},{"t":"芳香族アミンとアゾ化合物","p":"29/34ページ・30/34ページ","qs":[{"q":"アンモニアの水素原子を炭化水素基で置き換えた化合物を【 】という。","a":"アミン","s":0,"m":0},{"q":"置換基が脂肪族の炭化水素基のアミンを【 】という。","a":"脂肪族アミン","s":0,"m":0},{"q":"【 】C6H5NH2のように、ベンゼン環の炭素原子に窒素原子が直接結合した構造をもつアミン。(③に入る物質名)","a":"アニリン","s":0,"m":0},{"q":"ベンゼン環の炭素原子に窒素原子が直接結合した構造をもつアミンを【 】という。","a":"芳香族アミン","s":0,"m":0},{"q":"アミンは【 】性を示す有機化合物である。","a":"塩基","s":0,"m":0},{"q":"ニトロベンゼンをスズSn(または鉄Fe)と濃塩酸HClで還元し、【 】とする。","a":"アニリン塩酸塩","s":0,"m":0},{"q":"アニリンは、さらし粉水溶液によって酸化され、【 】色に呈色する。","a":"赤紫","s":0,"m":0},{"q":"アニリンを硫酸酸性の二クロム酸カリウム水溶液で酸化すると、水に不溶の黒色物質(=【 】)を生じる。","a":"アニリンブラック","s":0,"m":0},{"q":"アニリンは弱い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"アニリンは塩酸には塩(=【 】)を生じて溶ける。","a":"アニリン塩酸塩","s":0,"m":0},{"q":"アニリンに無水酢酸を作用させると、アミノ基がアセチル化され【 】が生成する。","a":"アセトアニリド","s":0,"m":0},{"q":"アセトアニリドのように、分子内に【 】結合-NH-CO-をもつ化合物をアミドという。(⑫に入る語)","a":"アミド","s":0,"m":0},{"q":"アミドを加水分解すると、もとのアミンと【 】が得られる。","a":"カルボン酸","s":0,"m":0},{"q":"アニリンの希塩酸水溶液を氷冷しながら亜硝酸ナトリウム水溶液を加えると、【 】が得られる。","a":"塩化ベンゼンジアゾニウム","s":0,"m":0},{"q":"芳香族アミンからR-N+≡Nの構造をもつジアゾニウム塩が生成する反応を【 】という。","a":"ジアゾ化","s":0,"m":0},{"q":"塩化ベンゼンジアゾニウムは、温度が上がると分解し、窒素を発生して【 】を生じる。","a":"フェノール","s":0,"m":0}]},{"t":"芳香族化合物の分離","p":"31/34ページ","qs":[{"q":"芳香族化合物は、一般に水に溶け【 】く、ジエチルエーテルなど有機溶媒に溶け(②)い。","a":"にく","s":0,"m":0},{"q":"芳香族化合物は有機溶媒には溶け【 】い。","a":"やす","s":0,"m":0},{"q":"化合物が酸や塩基の場合、塩基や酸の水溶液を加えると中和されて塩となり、水に溶け【 】くなる。","a":"やす","s":0,"m":0},{"q":"芳香族カルボン酸は炭酸よりも【 】い酸である。","a":"強","s":0,"m":0},{"q":"フェノールは炭酸よりも【 】い酸である。","a":"弱","s":0,"m":0},{"q":"酸の強さ:塩酸・硫酸>【 】>炭酸(CO2+H2O)>(⑦)","a":"カルボン酸","s":0,"m":0},{"q":"酸の強さ:塩酸・硫酸>カルボン酸>炭酸(CO2+H2O)>【 】","a":"フェノール","s":0,"m":0},{"q":"塩基の強さ:水酸化ナトリウム水溶液>【 】","a":"アミン","s":0,"m":0}]}];
+//CORE
+const norm=s=>s.normalize('NFKC').toLowerCase().replace(/[\u2010-\u2015\u2212]/g,'-').replace(/[\s^·・.*「」、。,]/g,'').replace(/[\u30A1-\u30F6]/g,c=>String.fromCharCode(c.charCodeAt(0)-96));
+const ND=/[^\x00-\x7F]/;
+function vars(a){
+ const o=new Set(),add=x=>{x=norm(x);x&&o.add(x)};
+ const segs=[a],m=a.match(/^(.*?(?:[^\x00-\x7F]|[)\]]))([A-Za-z\[][A-Za-z0-9\[\]()^+\-·・\/]*)$/);
+ if(m&&ND.test(m[1]))segs.push(m[1],m[2]);
+ for(const s of segs){
+  const xs=[s],jp=/\(([^()]*[^\x00-\x7F][^()]*)\)/g,base=s.replace(jp,'');
+  if(base!==s){xs.push(base);for(const t of s.matchAll(jp))xs.push(t[1])}
+  for(const x of xs.slice())xs.push(x.replace(/\((?:I{1,3}|IV|V|VI{1,3})\)/g,''));
+  xs.forEach(add);
+ }
+ if(/^\d+$/.test(a)){add(a+'族');add(a+'個')}
+ return o;
+}
+function judge(q,input){
+ if(!norm(input))return false;
+ if(q.m){
+  const exp=q.a.split(/[、,，]/).map(vars),got=input.split(/[、,，・\s]+/).map(norm).filter(Boolean),used=new Set();
+  return got.length===exp.length&&got.every(g=>{const i=exp.findIndex((v,k)=>!used.has(k)&&v.has(g));if(i<0)return false;used.add(i);return true});
+ }
+ const ni=norm(input),af=norm((q.q.split('】')[1]||'')),vs=vars(q.a);
+ if(vs.has(ni))return true;
+ for(const v of vs)if(ni.length>v.length&&ni.startsWith(v)&&af.startsWith(ni.slice(v.length)))return true;
+ return false;
+}
+const SB='₀₁₂₃₄₅₆₇₈₉',SP='⁰¹²³⁴⁵⁶⁷⁸⁹',sp=s=>s.replace(/\d/g,d=>SP[d]).replace(/\+/g,'⁺').replace(/-/g,'⁻');
+const fmt=s=>s.replace(/\^(\d*[+\-]?)/g,(_,c)=>sp(c)).replace(/([A-Za-z)\]])(\d*)(\+)(?![A-Za-z0-9])/g,(_,a,d,c)=>a+sp(d+c)).replace(/([A-Za-z)\]])(\d+)/g,(_,a,d)=>a+d.replace(/\d/g,x=>SB[x]));
+//END
+const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const ls=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}};
+let sel,S,comp=false;
+try{sel=new Set(JSON.parse(ls('sel')||'null')||DATA.map((_,i)=>i))}catch(e){sel=new Set(DATA.map((_,i)=>i))}
+const show=id=>{['s1','s2','s3'].forEach(s=>$('#'+s).hidden=s!==id);scrollTo(0,0)};
+function renderList(){
+ $('#list').innerHTML=DATA.map((u,i)=>`<label class="unit"><input type="checkbox" data-i="${i}"${sel.has(i)?' checked':''}><span><b>${esc(u.t)}</b><small>${esc(u.p)}</small></span><span class="n">${u.qs.length}問</span></label>`).join('');
+ upd();
+}
+function upd(){
+ const n=[...sel].reduce((a,i)=>a+DATA[i].qs.length,0);
+ $('#cnt').textContent=`${sel.size}単元・${n}問`;$('#go').disabled=!n;ls('sel',JSON.stringify([...sel]));
+}
+$('#list').onchange=e=>{const i=+e.target.dataset.i;e.target.checked?sel.add(i):sel.delete(i);upd()};
+$('#all').onclick=()=>{DATA.forEach((_,i)=>sel.add(i));renderList()};
+$('#none').onclick=()=>{sel.clear();renderList()};
+const shuf=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+function start(){
+ const all=[];
+ [...sel].sort((a,b)=>a-b).forEach(i=>DATA[i].qs.forEach((q,k)=>all.push({...q,id:i+'-'+k,u:DATA[i].t})));
+ if(!all.length)return;
+ S={n:all.length,q:$('#rnd').checked?shuf(all.slice()):all.slice(),done:new Set(),miss:{},first:0,all,cur:null,ans:false};
+ show('s2');next();
+}
+function fillQ(q,txt,cls){let k=0;return esc(fmt(q.q)).replace(/【[^】]*】/g,()=>k++?'<span class="bk">　　　</span>':`<span class="bk ${cls||''}">${txt?esc(fmt(txt)):'　　　'}</span>`)}
+function prog(){const d=S.done.size;$('#pb').style.width=d/S.n*100+'%';$('#st1').textContent=`正解済み ${d} / ${S.n}`;$('#st2').textContent=`残り ${S.n-d}問`}
+const A=$('#ans');
+function next(){
+ if(!S.q.length)return result();
+ const q=S.cur=S.q.shift();S.ans=false;
+ $('#chip').textContent=q.u;$('#qt').innerHTML=fillQ(q);
+ $('#fb').hidden=true;$('#b2').hidden=true;$('#b1').hidden=false;
+ A.readOnly=false;A.value='';A.placeholder=q.m?'すべて「、」で区切って入力':'答えを入力';
+ prog();A.focus({preventScroll:true});
+}
+function reveal(ok,giveup){
+ const q=S.cur;S.ans=true;
+ if(ok){S.done.add(q.id);if(!S.miss[q.id])S.first++}
+ else{S.miss[q.id]=(S.miss[q.id]||0)+1;const L=S.q.length,m=Math.min(3,L);S.q.splice(m+Math.random()*(L-m+1)|0,0,q)}
+ $('#qt').innerHTML=fillQ(q,q.a,ok?'ok':'ng');
+ const f=$('#fb');f.className='fb '+(ok?'ok':'ng');
+ f.innerHTML=`<b>${ok?'正解!':giveup?'答え':'不正解'}</b>`+(ok?'':`<p>答え: <b>${esc(fmt(q.a))}</b></p><p>あとでまた出題します</p>`)+(q.s?'<p>※この答えは教科書から補ったものです。念のため確認を</p>':'');
+ f.hidden=false;A.readOnly=true;A.blur();$('#b1').hidden=true;$('#b2').hidden=false;$('#ov').hidden=ok||giveup;
+ prog();
+}
+function submit(){
+ if(S.ans)return next();
+ const v=A.value.trim();if(v)reveal(judge(S.cur,v),false);
+}
+$('#ok').onclick=submit;$('#nx').onclick=next;
+$('#dk').onclick=()=>reveal(false,true);
+$('#ov').onclick=()=>{
+ const q=S.cur,i=S.q.indexOf(q);if(i>=0)S.q.splice(i,1);S.done.add(q.id);
+ $('#qt').innerHTML=fillQ(q,q.a,'ok');const f=$('#fb');f.className='fb ok';f.innerHTML='<b>正解にしました</b>';
+ $('#ov').hidden=true;prog();
+};
+function result(){
+ show('s3');
+ const ms=S.all.filter(q=>S.miss[q.id]).sort((a,b)=>S.miss[b.id]-S.miss[a.id]);
+ $('#rs').innerHTML=`<div class="g"><div><b>${S.n}</b>出題数</div><div><b>${S.first}</b>一発正解</div><div><b>${ms.length}</b>間違えた問題</div></div>`+
+ (ms.length?'<h2>間違えた問題(多い順)</h2>'+ms.map(q=>`<div class="card"><span class="chip">${esc(q.u)}・${S.miss[q.id]}回</span><p class="q" style="font-size:15px">${fillQ(q,q.a,'ok')}</p></div>`).join(''):'<p>全問、ミスなしでクリア!</p>');
+}
+A.addEventListener('compositionstart',()=>comp=true);
+A.addEventListener('pointerup',()=>{const v=window.visualViewport;if(document.activeElement===A&&!A.readOnly&&v&&v.height>innerHeight-80){A.blur();A.focus()}});
+A.addEventListener('compositionend',()=>setTimeout(()=>comp=false,50));
+document.addEventListener('keydown',e=>{
+ if(e.key!=='Enter'||e.repeat||e.isComposing||e.keyCode===229||comp||$('#s2').hidden||document.activeElement.tagName==='BUTTON')return;
+ if(S.ans||document.activeElement===A){e.preventDefault();submit()}
+});
+const KEYS=[...'₀₁₂₃₄₅₆₇₈₉','⁺','⁻','²','³','(',')','[',']','·','⌫'];
+$('#kb').innerHTML=KEYS.map(k=>`<button type="button" data-k="${k}">${k}</button>`).join('');
+$('#kb').addEventListener('mousedown',e=>e.preventDefault());
+$('#kb').addEventListener('pointerdown',e=>{
+ const b=e.target.closest('button');if(!b)return;e.preventDefault();
+ if(A.readOnly||S.ans)return;
+ A.focus({preventScroll:true});
+ const k=b.dataset.k;let s=A.selectionStart,t=A.selectionEnd;
+ if(k==='⌫'){if(s===t&&s>0)s--;A.setRangeText('',s,t,'end')}else A.setRangeText(k,s,t,'end');
+});
+$('#go').onclick=start;$('#again').onclick=start;$('#re').onclick=()=>show('s1');$('#back').onclick=()=>show('s1');
+renderList();
+</script></body></html>

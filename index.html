@@ -46,12 +46,62 @@ button:disabled{opacity:.4}
 .kb{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:0 0 6px}
 .kb button{padding:0;min-height:44px;font-size:18px;border-radius:10px;user-select:none;-webkit-user-select:none}
 .hint{color:var(--mute);font-size:12px;margin:0 0 12px}
+select{font:inherit;padding:8px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);max-width:100%}
+.dpo{display:flex;flex-direction:column;gap:10px;font-size:14px}.dpo .tg{margin:0}
+body.dopa{background:#000;color:#fff}
+body.dopa .card{color:var(--ink)}
+body.dopa h1,body.dopa h2,body.dopa .stat,body.dopa .hint{color:#fff}
+#hud{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:8px;background:#000d;color:#fff;border-radius:14px;padding:8px 14px;margin:10px 0 6px;font-weight:900;font-size:17px}
+#sc{display:inline-block}#sc.b{animation:bp .3s}@keyframes bp{50%{transform:scale(1.6);color:#ffe600}}
+#cb{color:#ffe600;text-shadow:0 0 10px #f80}
+#bm{display:flex;align-items:center;gap:8px;margin:6px 0;color:#fff;font-weight:900}
+#bmi{display:inline-block;font-size:26px}#bmw{flex:1;height:18px;background:#000a;border-radius:9px;overflow:hidden;border:2px solid #fff}
+#bmf{display:block;height:100%;width:100%;background:#22c55e}#bmt{font-size:22px;min-width:1.4em;text-align:right;text-shadow:0 2px 3px #000}
+#bm.dg #bmi{animation:wob .15s infinite}#bm.dg #bmf{animation:bl .25s infinite}
+@keyframes wob{50%{transform:rotate(20deg) scale(1.4)}}@keyframes bl{50%{opacity:.3}}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+#fl{position:fixed;inset:0;pointer-events:none;z-index:49;opacity:0}#fl.go{animation:fl .45s}@keyframes fl{0%{opacity:.8}100%{opacity:0}}
+#pops{position:fixed;inset:0;pointer-events:none;z-index:51;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.pop{position:absolute;font-weight:900;white-space:nowrap;-webkit-text-stroke:3px #000;paint-order:stroke fill;text-shadow:0 6px 0 #0008;animation:pp 1.15s cubic-bezier(.2,1.6,.4,1) forwards}
+@keyframes pp{0%{transform:scale(0) rotate(var(--r))}22%{transform:scale(1.35) rotate(var(--r))}65%{transform:scale(1) rotate(var(--r));opacity:1}100%{transform:scale(1.7) rotate(var(--r)) translateY(-50px);opacity:0}}
+main.shk{animation:shk .55s}@keyframes shk{0%,100%{transform:none}8%{transform:translate(-30px,16px) rotate(-3deg) scale(1.03)}25%{transform:translate(26px,-20px) rotate(3deg)}42%{transform:translate(-22px,-12px) rotate(-2deg) scale(1.03)}60%{transform:translate(20px,16px) rotate(2deg)}80%{transform:translate(-10px,6px)}}
+.dr{text-align:center;font-weight:700}.dr b{font-size:22px}.rk{font-size:96px;line-height:1.1;font-weight:900;color:#ffe600;-webkit-text-stroke:3px #000;paint-order:stroke fill}
+body.play{position:fixed;left:0;right:0;top:var(--vt,0px);height:var(--vh,100dvh);overflow:hidden}
+body.play main{height:100%;max-width:760px;display:flex;flex-direction:column;padding:max(10px,env(safe-area-inset-top)) 16px max(10px,env(safe-area-inset-bottom))}
+body.play #s2{flex:1;min-height:0;display:flex;flex-direction:column}
+body.play #s2 .card{flex:1;min-height:110px;overflow:auto;margin:6px 0;display:flex;flex-direction:column}
+body.play #s2 .card>:first-child{margin-top:auto}body.play #s2 .card>:last-child{margin-bottom:auto}
+body.play .prog{margin-top:6px}body.play .stat{margin:4px 0}body.play #hud{margin:4px 0}body.play .kb button{min-height:40px}body.play .hint{margin:0 0 6px}body.play #ans{margin:2px 0 8px}body.play .fb{margin:0 0 8px}
+main.zm{animation:zm .5s}@keyframes zm{40%{transform:scale(1.12)}}
+main.sp{animation:sp .7s}@keyframes sp{to{transform:rotate(360deg)}}
+main.hu{animation:hu .8s}@keyframes hu{to{filter:hue-rotate(360deg) saturate(3)}}
+main.iv{animation:iv .4s}@keyframes iv{50%{filter:invert(1)}}
+main.tl{animation:tl .6s}@keyframes tl{30%{transform:perspective(600px) rotateX(25deg)}60%{transform:perspective(600px) rotateY(-25deg)}}
+.bn{position:fixed;left:-120%;top:38%;width:100%;white-space:nowrap;font:900 min(20vw,130px)/1 sans-serif;-webkit-text-stroke:4px #000;paint-order:stroke fill;z-index:52;pointer-events:none;animation:bn 1s linear forwards;transform:rotate(-8deg)}
+@keyframes bn{to{left:120%}}
+body.kbo .hint,body.kbo .stat,body.kbo .prog{display:none}
+body.dopa #ans{border-color:#ffe600;box-shadow:0 0 14px #ffe600}
+#ans.jt{animation:jt .15s}@keyframes jt{30%{transform:translateX(-8px) scale(1.02)}60%{transform:translateX(8px)}}
+#ib{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:2px 0}.ac{font-size:22px}
+.ibtn{min-height:34px;padding:2px 10px;font-size:13px;background:#000;color:#fff;border:2px solid}
+.invr{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.it{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:92px;flex:1;border:3px solid var(--c,var(--line));padding:8px;background:var(--card);color:var(--ink);text-align:center}
+.it span{font-size:28px}.it small{color:var(--c)}.it em{font-size:11px;font-style:normal;color:var(--mute)}
+.it.sel{outline:3px solid var(--acc);transform:scale(1.05)}.it.r2{box-shadow:0 0 12px var(--c)}
+.it.r3{animation:gl .7s infinite alternate}@keyframes gl{to{box-shadow:0 0 28px 6px var(--c)}}
 </style></head><body><main>
 
 <section id="s1">
 <h1>化学 一問一答</h1>
 <p class="sub">答えをキーボードで入力。正解した問題は出ません。間違い・わからないは、あとでまた出ます。</p>
 <label class="tg"><input type="checkbox" id="rnd" checked>最初の出題順をランダムにする</label>
+<label class="tg" id="dpl" hidden><input type="checkbox" id="dp">🔥 ドパガキモード(爆音・爆発・時間制限)</label>
+<div class="card dpo" id="dopt" hidden>
+<p class="hint" style="margin:0">💣 爆弾問題がランダムで出現します(時間内に正解しないと大爆発)</p>
+<label>🏁 ルール <select id="rl"><option value="ta">タイムアタック(全問正解までの速さ)</option><option value="sv">サバイバル(60秒・正解で+4秒・ミスで-5秒)</option></select></label>
+<label class="tg"><input type="checkbox" id="snd" checked>効果音ON</label>
+<div id="inv"></div><div class="row"><button id="dsc" disabled>選んだアイテムを捨てる</button></div>
+</div>
 <div class="row"><button id="all">全選択</button><button id="none">全解除</button></div>
 <div id="list"></div>
 <div class="bar"><div id="cnt"></div><button class="p" id="go">スタート</button></div>
@@ -59,6 +109,9 @@ button:disabled{opacity:.4}
 
 <section id="s2" hidden>
 <div class="row"><button id="back">← 範囲選択</button></div>
+<div id="hud" hidden><span>🏆<span id="sc">0</span></span><span id="cb"></span><span id="tm"></span></div>
+<div id="bm" hidden><span id="bmi">💣</span><span id="bmw"><i id="bmf"></i></span><b id="bmt"></b></div>
+<div id="ib" hidden></div>
 <div class="prog"><i id="pb"></i></div>
 <div class="stat"><span id="st1"></span><span id="st2"></span></div>
 <div class="card"><span class="chip" id="chip"></span><p class="q" id="qt"></p></div>
@@ -76,6 +129,7 @@ button:disabled{opacity:.4}
 <div class="row" style="margin-top:16px"><button class="p" id="again" style="flex:1">同じ範囲でもう一度</button><button id="re">範囲を選び直す</button></div>
 </section>
 </main>
+<canvas id="fx"></canvas><div id="fl"></div><div id="pops"></div>
 <script>
 const DATA=[{"t":"水素・酸素・貴ガス・酸化物","p":"1/34ページ・p.94","qs":[{"q":"水素H2は無色・無臭の気体で、すべての気体の中で最も【 】。","a":"軽い","s":0,"m":0},{"q":"水素は水に溶けにくいので、【 】で捕集する。","a":"水上置換","s":0,"m":0},{"q":"水素とほかの元素との化合物を【 】という。","a":"水素化合物","s":0,"m":0},{"q":"15〜17族の元素は水素と【 】結合により分子をつくる。","a":"共有","s":0,"m":0},{"q":"18族に属するHe, Ne, Ar, Kr, Xe, Rnを【 】という。","a":"貴ガス","s":0,"m":0},{"q":"貴ガスの価電子の数は【 】個。","a":"0","s":0,"m":0},{"q":"酸素O2は、実験室では【 】水に触媒として少量の酸化マンガン(IV)を加えて得る。","a":"過酸化水素","s":0,"m":0},{"q":"酸素O2のほかオゾンO3のように、同じ元素からなる単体で性質の異なる物質を互いに【 】という。","a":"同素体","s":0,"m":0},{"q":"オゾンO3は【 】色で、特異臭のある有毒な気体である。","a":"淡青","s":0,"m":0},{"q":"オゾンは強い【 】作用を示す。","a":"酸化","s":0,"m":0},{"q":"オゾンは、水で湿らせた【 】紙を青紫色に変えることで検出できる。","a":"ヨウ化カリウムデンプン","s":0,"m":0},{"q":"SiO2, P4O10, SO3, Cl2O7など、水と反応して酸を生じたり塩基と反応して塩を生じたりする非金属元素の酸化物を【 】という。","a":"酸性酸化物","s":0,"m":0},{"q":"Na2OやMgOなど、水と反応して塩基を生じたり酸と反応して塩を生じたりする金属元素の酸化物を【 】という。","a":"塩基性酸化物","s":0,"m":0},{"q":"Al2O3やZnOのように、酸とも塩基とも反応して塩を生じる酸化物を【 】という。","a":"両性酸化物","s":0,"m":0},{"q":"分子中に酸素原子を含む酸を【 】という。","a":"オキソ酸","s":0,"m":0},{"q":"同一元素のオキソ酸では、中心原子に結合する酸素原子の数が多いほど、酸性は【 】くなる。","a":"強","s":0,"m":0}]},{"t":"ハロゲン","p":"3/34ページ","qs":[{"q":"周期表の【 】族に属するF, Cl, Br, I, Atは何と呼ばれる?(①の答え)","a":"17","s":0,"m":0},{"q":"周期表の17族に属するF, Cl, Br, I, Atを【 】という。","a":"ハロゲン","s":0,"m":0},{"q":"ハロゲンの単体の融点や沸点は、原子番号が大きいほど【 】い。","a":"高","s":0,"m":0},{"q":"ハロゲンは多くの化合物と反応して【 】をつくりやすい。","a":"ハロゲン化物","s":0,"m":0},{"q":"塩素Cl2は刺激臭をもつ【 】色の有毒な気体で、空気より重い。","a":"黄緑","s":0,"m":0},{"q":"塩素は水に溶け、一部が水と反応して塩化水素HClと【 】を生じる。","a":"次亜塩素酸HClO","s":0,"m":0},{"q":"臭素Br2は常温で【 】色である。","a":"赤褐","s":0,"m":0},{"q":"臭素Br2は常温で【 】体で、有毒な蒸気を発生する。","a":"液","s":0,"m":0},{"q":"ヨウ素I2は常温で【 】性をもつ。","a":"昇華","s":0,"m":0},{"q":"ヨウ素I2は【 】色の固体である。","a":"黒紫","s":0,"m":0},{"q":"ヨウ素はヨウ化カリウム水溶液に溶けて褐色の【 】水溶液となる。","a":"ヨウ素ヨウ化カリウム","s":0,"m":0},{"q":"ヨウ素水溶液がデンプン水溶液と反応して青紫色を示す反応を【 】といい、デンプンの検出に用いる。","a":"ヨウ素デンプン反応","s":0,"m":0},{"q":"ハロゲンの単体と水素を反応させると【 】を生じる。","a":"ハロゲン化水素","s":0,"m":0},{"q":"ハロゲン化水素のうち、水溶液だけが弱酸であるのは【 】。","a":"フッ化水素HF","s":0,"m":0},{"q":"塩化水素HClは、塩化ナトリウムに濃硫酸を加えて加熱し、【 】により捕集する。","a":"下方置換","s":0,"m":0},{"q":"塩化水素HClの水溶液を【 】という。","a":"塩酸","s":0,"m":0},{"q":"濃塩酸が試薬びんの栓を開けると白煙を生じるような性質を【 】という。","a":"発煙性","s":0,"m":0},{"q":"塩化水素とアンモニアが反応すると【 】の白煙を生じる。(反応の検出に利用)","a":"塩化アンモニウムNH4Cl","s":0,"m":0},{"q":"フッ化水素HFは、他のハロゲン化水素に比べて沸点が比較的【 】い。","a":"高","s":0,"m":0},{"q":"フッ化水素HFの水溶液は【 】である。","a":"弱酸","s":0,"m":0},{"q":"塩素を水酸化カルシウムに吸収させて得られる【 】の主成分がCaCl(ClO)・H2Oである。","a":"さらし粉","s":0,"m":0}]},{"t":"硫黄","p":"5/34ページ","qs":[{"q":"硫黄は周期表の【 】族に属し、原子は6個の価電子をもつ。","a":"16","s":0,"m":0},{"q":"硫黄は多くの元素と化合物(=【 】)をつくり、地殻中に鉱物として多量に存在する。","a":"硫化物","s":0,"m":0},{"q":"硫黄の単体には同素体が存在する。その3つを答えよ(順不同)。","a":"斜方硫黄、単斜硫黄、ゴム状硫黄","s":0,"m":1},{"q":"硫化水素H2Sは実験室では【 】に希硫酸または希塩酸を加えて発生させる。","a":"硫化鉄(II)FeS","s":0,"m":0},{"q":"硫化水素は無色で【 】臭の有毒な気体である。","a":"腐卵","s":0,"m":0},{"q":"二酸化硫黄SO2は、銅に【 】を作用させても得られる。","a":"熱濃硫酸","s":0,"m":0},{"q":"二酸化硫黄は水に溶けると【 】を生じ、弱い酸性を示す。","a":"亜硫酸H2SO3","s":0,"m":0},{"q":"SO2やH2SO3には【 】作用があり、紙や繊維などの漂白剤に用いられる。","a":"還元","s":0,"m":0},{"q":"二酸化硫黄は通常【 】剤としてはたらく。","a":"還元","s":0,"m":0},{"q":"二酸化硫黄は、硫化水素のような強い還元剤に対しては【 】剤としてはたらき、硫黄の単体が遊離する。","a":"酸化","s":0,"m":0},{"q":"硫酸は工業的には【 】法によってつくられる。","a":"接触","s":0,"m":0},{"q":"接触法で、二酸化硫黄を【 】を触媒として空気中の酸素で酸化する。","a":"酸化バナジウム(V)V2O5","s":0,"m":0},{"q":"接触法で二酸化硫黄を酸化して得られる物質は【 】。","a":"三酸化硫黄SO3","s":0,"m":0},{"q":"三酸化硫黄を濃硫酸に吸収させたものを【 】という。","a":"発煙硫酸","s":0,"m":0},{"q":"濃硫酸は沸点が高く、【 】性の酸である。","a":"不揮発","s":0,"m":0},{"q":"濃硫酸は【 】が高く、中性・酸性気体の乾燥剤に用いられる。","a":"吸湿性","s":0,"m":0},{"q":"濃硫酸が水素と酸素を有機化合物からH:O=2:1の割合で奪う作用を【 】作用という。","a":"脱水","s":0,"m":0},{"q":"熱濃硫酸は強い【 】作用をもち、銅や銀などを溶かしてSO2を発生する。","a":"酸化","s":0,"m":0},{"q":"希硫酸は電離度が大きく強い【 】性を示す。","a":"酸","s":0,"m":0}]},{"t":"窒素・リン","p":"7/34ページ","qs":[{"q":"窒素N2は、工業的には液体空気の【 】で得られる。","a":"分留","s":0,"m":0},{"q":"窒素は-196℃で凝縮し、【 】は冷却剤として用いられる。","a":"液体窒素","s":0,"m":0},{"q":"アンモニアNH3は、【 】で捕集する。","a":"上方置換","s":0,"m":0},{"q":"濃塩酸を付けたガラス棒を近づけると、塩化アンモニウムの【 】を生じることで検出される。","a":"白煙","s":0,"m":0},{"q":"アンモニアは工業的には【 】法によってつくられる。","a":"ハーバー・ボッシュ","s":0,"m":0},{"q":"アンモニアの水溶液は弱い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"一酸化窒素NOは水に溶けにくい【 】色の気体である。","a":"無","s":0,"m":0},{"q":"実験室では、銅に【 】を反応させると一酸化窒素が発生する。","a":"希硝酸","s":0,"m":0},{"q":"一酸化窒素は【 】で捕集する。","a":"水上置換","s":0,"m":0},{"q":"一酸化窒素は空気中ですみやかに酸化され【 】となる。","a":"二酸化窒素","s":0,"m":0},{"q":"二酸化窒素NO2は水に溶けやすい【 】色の有毒な気体である。","a":"赤褐","s":0,"m":0},{"q":"実験室では、銅に【 】を反応させると二酸化窒素が発生する。","a":"濃硝酸","s":0,"m":0},{"q":"二酸化窒素は【 】で捕集する。","a":"下方置換","s":0,"m":0},{"q":"硝酸HNO3は、工業的には【 】法でつくられる。","a":"オストワルト","s":0,"m":0},{"q":"オストワルト法で、アンモニアを【 】を触媒として酸化する。","a":"白金Pt","s":0,"m":0},{"q":"アンモニアを酸化して得られる、空気中の酸素でさらに酸化して二酸化窒素にする物質は【 】。","a":"一酸化窒素NO","s":0,"m":0},{"q":"リンの単体には黄リンや赤リンなどの【 】が存在する。","a":"同素体","s":0,"m":0},{"q":"黄リンは空気中で自然発火するので【 】中に保存する。","a":"水","s":0,"m":0},{"q":"リンを空気中で燃焼させると【 】になる。","a":"十酸化四リンP4O10","s":0,"m":0},{"q":"十酸化四リンは吸湿性が強く、強力な【 】として用いられる。","a":"乾燥剤","s":0,"m":0},{"q":"十酸化四リンに水を加え加熱すると、徐々に反応して【 】になる。","a":"リン酸H3PO4","s":0,"m":0}]},{"t":"炭素・ケイ素","p":"9/34ページ","qs":[{"q":"炭素の単体にはダイヤモンドや黒鉛などの【 】がある。","a":"同素体","s":1,"m":0},{"q":"一酸化炭素COは、炭素または炭素化合物の【 】や、二酸化炭素と高温の炭素の接触により生成する。","a":"不完全燃焼","s":1,"m":0},{"q":"実験室では、【 】を濃硫酸とともに加熱し、脱水すると一酸化炭素が得られる。","a":"ギ酸HCOOH","s":1,"m":0},{"q":"COは高温でほかの物質から酸素を奪ってCO2に変わりやすい性質(=【 】)があり、金属の製錬などに利用される。","a":"還元性(還元作用)","s":1,"m":0},{"q":"実験室で二酸化炭素を発生させる石灰石の主成分は【 】。","a":"炭酸カルシウムCaCO3","s":1,"m":0},{"q":"二酸化炭素は水に少し溶けて、水溶液は弱い【 】性を示す。","a":"酸","s":1,"m":0},{"q":"二酸化炭素を【 】に通じると、炭酸カルシウムの沈殿を生じて白濁する。","a":"石灰水","s":1,"m":0},{"q":"二酸化炭素の固体は【 】と呼ばれ、冷却剤として利用される。","a":"ドライアイス","s":1,"m":0},{"q":"ケイ素Siは、地殻中に【 】の次に多く存在する。","a":"酸素","s":1,"m":0},{"q":"ケイ素は自然界には単体で存在せず、酸化物を【 】してつくる。","a":"還元","s":1,"m":0},{"q":"ケイ素の単体はダイヤモンドと同じ構造の【 】結合の結晶を形成する。","a":"共有","s":1,"m":0},{"q":"ケイ素の単体は、電気伝導性が金属と非金属の中間で、【 】の性質を示す。","a":"半導体","s":1,"m":0},{"q":"二酸化ケイ素は、ケイ素原子の周囲に【 】個の酸素原子が共有結合でつながる。","a":"4","s":1,"m":0},{"q":"二酸化ケイ素の組成式は【 】である。","a":"SiO2","s":1,"m":0},{"q":"高純度の二酸化ケイ素を融解して繊維状にしたものは【 】と呼ばれる。","a":"光ファイバー","s":1,"m":0},{"q":"二酸化ケイ素を水酸化ナトリウムや炭酸ナトリウムとともに加熱すると【 】を生じる。","a":"ケイ酸ナトリウム","s":1,"m":0},{"q":"二酸化ケイ素を塩基と反応させて得られる化合物を【 】という。","a":"ケイ酸塩","s":1,"m":0},{"q":"ケイ酸ナトリウムに水を加えて加熱すると得られる、無色透明で粘性の大きな液体を【 】という。","a":"水ガラス","s":1,"m":0},{"q":"水ガラスの水溶液に塩酸を加えると生成する白色ゲル状沈殿は【 】。","a":"ケイ酸","s":1,"m":0},{"q":"ケイ酸を加熱して脱水すると【 】になる。(多孔質で乾燥剤・吸着剤に利用)","a":"シリカゲル","s":1,"m":0}]},{"t":"アルカリ金属・ナトリウム化合物","p":"11/34ページ・p.104","qs":[{"q":"周期表の1族元素のうち、Hを除くLi, Na, K, Rb, Cs, Frの6種類を【 】という。","a":"アルカリ金属","s":0,"m":0},{"q":"工業的には、アルカリ金属の化合物を高温で融解して電気分解(=【 】)し単体を得る。","a":"溶融塩電解","s":0,"m":0},{"q":"アルカリ金属の単体は、融点が【 】い。","a":"低","s":0,"m":0},{"q":"アルカリ金属の単体や化合物は、特有の【 】反応を示す。","a":"炎色","s":0,"m":0},{"q":"アルカリ金属の単体は【 】力が強く、常温の水と激しく反応する。","a":"還元","s":0,"m":0},{"q":"アルカリ金属が常温の水と反応すると【 】を発生し、水酸化物を生じる。","a":"水素","s":0,"m":0},{"q":"水酸化ナトリウムNaOHの水溶液は強い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"水酸化ナトリウムの固体が空気中の水分を吸収して溶ける現象を【 】という。","a":"潮解","s":0,"m":0},{"q":"水酸化ナトリウムは空気中の二酸化炭素を吸収して【 】に変化する。","a":"炭酸ナトリウムNa2CO3","s":0,"m":0},{"q":"炭酸ナトリウムNa2CO3の水溶液は【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"炭酸ナトリウム十水和物を空気中に放置すると水和水の一部を失い、白色粉末状の【 】となる。","a":"炭酸ナトリウム一水和物Na2CO3·H2O","s":0,"m":0},{"q":"結晶が水和水を失って粉末になる現象を【 】という。","a":"風解","s":0,"m":0},{"q":"炭酸ナトリウムは工業的には【 】法でつくられる。","a":"アンモニアソーダ(ソルベー)","s":0,"m":0},{"q":"塩化ナトリウム飽和水溶液にアンモニアと二酸化炭素を吹き込むと沈殿するのは【 】。","a":"炭酸水素ナトリウムNaHCO3","s":0,"m":0},{"q":"炭酸水素ナトリウムNaHCO3の別名は【 】。","a":"重曹","s":0,"m":0},{"q":"炭酸水素ナトリウムの水溶液は弱い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"炭酸水素ナトリウムは強酸を加えたり加熱したりすると分解して【 】を発生する。","a":"二酸化炭素CO2","s":0,"m":0}]},{"t":"2族元素・カルシウム化合物","p":"13/34ページ・p.106","qs":[{"q":"周期表の2族元素は【 】と呼ばれる。(ベリリウム・マグネシウムは除く場合もある)","a":"アルカリ土類金属","s":0,"m":0},{"q":"2族元素の原子は【 】個の価電子をもつ。","a":"2","s":0,"m":0},{"q":"2族元素は、同周期のアルカリ金属に比べて融点は【 】い。","a":"高","s":0,"m":0},{"q":"Ca, Sr, Baは常温の水と反応して【 】を発生する。","a":"水素","s":0,"m":0},{"q":"Ca, Sr, Baは水と反応して強【 】性の水酸化物になる。","a":"塩基","s":0,"m":0},{"q":"マグネシウムMgは、常温の水とはほとんど反応せず、【 】とは反応する。","a":"熱水","s":0,"m":0},{"q":"酸化カルシウムCaOの別名は【 】。","a":"生石灰","s":0,"m":0},{"q":"酸化カルシウムは水と反応して発熱するため、【 】剤や発熱剤などに用いられる。","a":"乾燥","s":0,"m":0},{"q":"水酸化カルシウムCa(OH)2の別名は【 】。","a":"消石灰","s":0,"m":0},{"q":"水酸化カルシウムは水に少し溶けて強い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"水酸化カルシウムの飽和水溶液を【 】という。","a":"石灰水","s":0,"m":0},{"q":"石灰水に二酸化炭素を吹き込むと炭酸カルシウムの【 】色沈殿を生じる。","a":"白","s":0,"m":0},{"q":"さらに二酸化炭素を吹き込むと、生じた炭酸カルシウムは【 】となって溶解する。","a":"炭酸水素カルシウムCa(HCO3)2","s":0,"m":0},{"q":"CO2を含んだ水が石灰岩を徐々に浸食してできる大きな洞窟を【 】という。","a":"鍾乳洞","s":0,"m":0},{"q":"炭酸カルシウムは塩酸などの強酸と反応して【 】を発生する。","a":"二酸化炭素CO2","s":0,"m":0},{"q":"塩化カルシウムCaCl2は融雪剤や【 】剤などに用いられる。","a":"乾燥","s":0,"m":0},{"q":"硫酸カルシウム二水和物CaSO4·2H2Oの天然の産出名(=【 】)","a":"セッコウ","s":0,"m":0},{"q":"セッコウを加熱すると、水和水の一部を失い、硫酸カルシウム半水和物CaSO4·1/2H2O(【 】)となる。","a":"焼きセッコウ","s":0,"m":0},{"q":"硫酸バリウムBaSO4は、X線の吸収力が大きいので、胃や腸のX線撮影の【 】に用いられる。","a":"造影剤","s":0,"m":0}]},{"t":"アルミニウム・スズ","p":"15/34ページ・p.108","qs":[{"q":"アルミニウムAlは周期表の【 】族に属する。","a":"13","s":1,"m":0},{"q":"Alの原子は【 】個の価電子をもち、(②)価の陽イオンになりやすい。","a":"3","s":1,"m":0},{"q":"アルミニウムは、工業的には原料鉱石の【 】を精製して得られる酸化アルミニウムから製造する。","a":"ボーキサイト","s":1,"m":0},{"q":"アルミナAl2O3を【 】とともに(⑤)して製造する。(④に入る物質)","a":"氷晶石","s":1,"m":0},{"q":"アルミナを氷晶石とともに【 】して、アルミニウムを製造する。","a":"溶融塩電解(融解塩電解)","s":1,"m":0},{"q":"アルミニウムは、表面の緻密な酸化被膜が内部を保護するため濃硝酸にも溶けない。この状態を【 】という。","a":"不動態","s":1,"m":0},{"q":"アルミニウムの表面に人工的に厚い酸化被膜をつけた製品を【 】という。","a":"アルマイト","s":1,"m":0},{"q":"Al粉末とFe2O3の混合物に点火し、Alの還元力を利用して金属の単体を得る方法を【 】法という。","a":"テルミット","s":1,"m":0},{"q":"アルミニウムは酸や強塩基の水溶液と反応するので【 】である。","a":"両性金属","s":1,"m":0},{"q":"アルミニウムは酸や強塩基の水溶液と反応して【 】を発生する。","a":"水素","s":1,"m":0},{"q":"アルミニウムと少量の銅、マグネシウムなどとの合金を【 】といい、航空機の機体などに利用される。","a":"ジュラルミン","s":1,"m":0},{"q":"酸化アルミニウムAl2O3の別名は【 】。","a":"アルミナ","s":1,"m":0},{"q":"酸化アルミニウムは、酸や強塩基の水溶液にも反応して溶ける【 】である。","a":"両性酸化物","s":1,"m":0},{"q":"Al3+を含む水溶液に塩基を加えると生じる白色ゲル状の沈殿は【 】。","a":"水酸化アルミニウムAl(OH)3","s":1,"m":0},{"q":"水酸化アルミニウムは、酸や強塩基の水溶液には溶けるがアンモニア水には溶けない【 】である。","a":"両性水酸化物","s":1,"m":0},{"q":"硫酸カリウムアルミニウム十二水和物AlK(SO4)2·12H2Oを【 】という。","a":"ミョウバン","s":1,"m":0},{"q":"ミョウバンのように、2種類以上の塩が一定の割合で結合した形で表せ、それぞれの成分イオンがそのまま存在する塩を【 】という。","a":"複塩","s":1,"m":0},{"q":"スズの単体は【 】で、酸・強塩基のいずれの水溶液にも溶ける。","a":"両性金属","s":1,"m":0},{"q":"スズめっき鋼板を【 】という。","a":"ブリキ","s":1,"m":0},{"q":"スズと銅との合金(=【 】)","a":"青銅","s":1,"m":0},{"q":"スズと銀・銅との合金(=【 】)","a":"鉛フリーはんだ","x":["無鉛はんだ","鉛フリー半田","無鉛半田"],"s":1,"m":0}]},{"t":"遷移元素・鉄","p":"17/34ページ・p.110","qs":[{"q":"遷移元素の単体は密度が大きく、融点が【 】いものが多い。","a":"高","s":1,"m":0},{"q":"遷移元素は1つの元素が複数の酸化数をとることが多く、イオンや化合物には【 】色のものが多い。","a":"有","s":1,"m":0},{"q":"中心となる金属イオンに【 】をもつ分子や陰イオンが配位結合してできたイオンを(④)という。(③に入る語)","a":"非共有電子対","s":1,"m":0},{"q":"金属イオンに非共有電子対をもつ分子や陰イオンが配位結合してできたイオンを【 】という。","a":"錯イオン","s":1,"m":0},{"q":"非共有電子対を与えて配位結合する分子や陰イオンを【 】という。","a":"配位子","s":1,"m":0},{"q":"配位子の数を【 】という。","a":"配位数","s":1,"m":0},{"q":"鉄の単体は、塩酸・希硫酸には【 】を発生しながら溶け、鉄(II)イオンとなる。","a":"水素","s":1,"m":0},{"q":"鉄は濃硝酸には【 】となるため、溶解しない。","a":"不動態","s":1,"m":0},{"q":"鉄とクロム、ニッケルの合金(=【 】)はさびにくい。","a":"ステンレス鋼","x":["ステンレス"],"s":1,"m":0},{"q":"鉄を湿った空気中に放置すると酸化され、酸化鉄(III)水和物を生じる。これが鉄の【 】である。","a":"赤さび","s":1,"m":0},{"q":"鉄を強熱すると四酸化三鉄を生じる。これが鉄の【 】である。","a":"黒さび","s":1,"m":0},{"q":"鉄を希硫酸に溶かした水溶液を濃縮すると、【 】色の硫酸鉄(II)七水和物FeSO4·7H2Oが得られる。","a":"淡緑","s":1,"m":0}]},{"t":"銅・銀","p":"19/34ページ","qs":[{"q":"銅Cuは、多くは【 】(主成分CuFeS2)などの化合物として産出する。","a":"黄銅鉱","s":1,"m":0},{"q":"工業的には、銅の単体は【 】で得られる。(粗銅を純銅にする方法)","a":"電解精錬","s":1,"m":0},{"q":"銅は湿った空気中では徐々に緑色のさび(=【 】)を生じる。","a":"緑青","s":1,"m":0},{"q":"銅と亜鉛の合金を【 】という。","a":"黄銅(真ちゅう)","s":1,"m":0},{"q":"銅とスズの合金を【 】という。","a":"青銅(ブロンズ)","s":1,"m":0},{"q":"銅は塩酸や希硫酸には溶けないが、酸化力のある【 】や熱濃硫酸に溶ける。","a":"硝酸","s":1,"m":0},{"q":"銅を空気中で加熱すると、1000℃以下では黒色の【 】を生成する。","a":"酸化銅(II)CuO","s":1,"m":0},{"q":"1000℃以上では、赤色の【 】を生成する。","a":"酸化銅(I)Cu2O","s":1,"m":0},{"q":"硫酸銅(II)の水溶液から結晶を析出させると、【 】の青色結晶が得られる。","a":"硫酸銅(II)五水和物CuSO4·5H2O","s":1,"m":0},{"q":"この結晶を150℃以上に加熱すると、水和水をすべて失って白色粉末状の【 】となる。","a":"硫酸銅(II)(無水物)CuSO4","s":1,"m":0},{"q":"Cu2+を含む水溶液に塩基の水溶液を加えると、【 】の青白色沈殿を生じる。","a":"水酸化銅(II)Cu(OH)2","s":1,"m":0},{"q":"水酸化銅(II)を加熱すると、黒色の【 】になる。","a":"酸化銅(II)CuO","s":1,"m":0},{"q":"水酸化銅(II)の沈殿に過剰量のアンモニア水を加えると、溶解して【 】色の溶液となる。","a":"深青","s":1,"m":0},{"q":"Cu2+を含む水溶液に硫化水素を通じると、【 】の黒色沈殿を生成する。","a":"硫化銅(II)CuS","s":1,"m":0},{"q":"銀の単体は空気中で酸化されにくく、【 】や熱の伝導性は金属中で最大である。","a":"電気伝導性","s":1,"m":0},{"q":"硝酸銀は光によって分解して銀を遊離する性質(=【 】)があるため、褐色びんに保存する。","a":"感光性","s":1,"m":0},{"q":"銀イオンはハロゲン化物イオンと反応して【 】を生じる。","a":"ハロゲン化銀","s":1,"m":0},{"q":"ハロゲン化銀のうち、水に溶けるのは【 】。","a":"フッ化銀AgF","s":1,"m":0},{"q":"アンモニア水には【 】はよく溶ける。","a":"塩化銀AgCl","s":1,"m":0},{"q":"臭化銀は【 】水溶液に溶ける。","a":"チオ硫酸ナトリウムNa2S2O3","s":1,"m":0}]},{"t":"亜鉛・クロム・マンガン","p":"21/34ページ・22/34ページ","qs":[{"q":"亜鉛の単体は【 】で、酸、強塩基の水溶液と反応して水素を発生する。","a":"両性金属","s":0,"m":0},{"q":"亜鉛と銅の合金を【 】という。","a":"黄銅","s":0,"m":0},{"q":"亜鉛めっき鋼板を【 】という。","a":"トタン","s":0,"m":0},{"q":"酸化亜鉛ZnOは、酸、強塩基の水溶液と反応する【 】である。","a":"両性酸化物","s":0,"m":0},{"q":"Zn2+を含む水溶液に少量の塩基を加えると、【 】の白色ゲル状沈殿を生じる。","a":"水酸化亜鉛Zn(OH)2","s":0,"m":0},{"q":"水酸化亜鉛は【 】で、酸、強塩基の水溶液と反応して溶ける。","a":"両性水酸化物","s":0,"m":0},{"q":"Zn2+を含む水溶液に中性または塩基性で硫化水素を吹き込むと、【 】の白色沈殿が生成する。","a":"硫化亜鉛ZnS","s":0,"m":0},{"q":"クロムCrの単体は空気中では【 】となり酸化被膜をつくるので、酸化されにくい。","a":"不動態","s":0,"m":0},{"q":"クロム酸カリウムK2CrO4は【 】色の結晶である。","a":"黄","s":0,"m":0},{"q":"クロム酸イオンCrO4^2-を含む水溶液を酸性にすると【 】が生じる。","a":"二クロム酸イオンCr2O7^2-","s":0,"m":0},{"q":"二クロム酸イオンを生じて【 】色になる。","a":"橙赤","s":0,"m":0},{"q":"二クロム酸カリウムK2Cr2O7は【 】色の結晶である。","a":"橙赤","s":0,"m":0},{"q":"二クロム酸カリウムは、硫酸で酸性にした水溶液中では強い【 】作用を示す。","a":"酸化","s":0,"m":0},{"q":"二クロム酸カリウムが酸化作用を示すと【 】(暗緑色)を生じる。","a":"クロム(III)イオンCr3+","s":0,"m":0},{"q":"CrO4^2-はAg+と反応して【 】(暗赤色)の沈殿を生じる。","a":"クロム酸銀Ag2CrO4","s":0,"m":0},{"q":"CrO4^2-はPb2+と反応して【 】(黄色)の沈殿を生じる。","a":"クロム酸鉛(II)PbCrO4","s":0,"m":0},{"q":"CrO4^2-はBa2+と反応して【 】(黄色)の沈殿を生じる。","a":"クロム酸バリウムBaCrO4","s":0,"m":0},{"q":"酸化マンガン(IV)MnO2は【 】色の粉末で水に溶けない。","a":"黒褐","s":0,"m":0},{"q":"MnO2は乾電池(正極活物質)に使われるほか、過酸化水素水から酸素を発生させるなど、多くの反応の【 】に用いられる。","a":"触媒","s":0,"m":0},{"q":"過マンガン酸カリウムKMnO4は黒紫色の結晶で、水に溶けて【 】色の過マンガン酸イオンMnO4^-を生じる。","a":"赤紫","s":0,"m":0},{"q":"KMnO4は硫酸酸性にした水溶液中で、強い【 】作用を示す。","a":"酸化","s":0,"m":0}]},{"t":"金属イオンの沈殿・系統分離","p":"24/34ページ・p.117","qs":[{"q":"Na+, K+などのアルカリ金属のイオンは、いかなる試薬とも沈殿をつくらないので、【 】によって検出する。","a":"炎色反応","s":0,"m":0},{"q":"Ag+, Pb2+を含む水溶液に希塩酸を加えると、Ag+の白色沈殿は【 】。","a":"AgCl","s":0,"m":0},{"q":"同じくPb2+の白色沈殿は【 】。","a":"PbCl2","s":0,"m":0},{"q":"PbCl2は【 】に溶ける。","a":"熱水","s":0,"m":0},{"q":"ZnSは【 】色の沈殿。","a":"白","s":0,"m":0},{"q":"FeSは【 】色の沈殿。","a":"黒","s":0,"m":0},{"q":"Cu2+に硫化水素を通じると生じる黒色沈殿は【 】。","a":"CuS","s":0,"m":0},{"q":"Ag+に硫化水素を通じると生じる黒色沈殿は【 】。","a":"Ag2S","s":0,"m":0},{"q":"PbSは【 】色の沈殿。","a":"黒","s":0,"m":0},{"q":"Al3+に塩基を加えると生じる白色沈殿は【 】。","a":"Al(OH)3","s":0,"m":0},{"q":"Zn2+に塩基を加えると生じる白色沈殿は【 】。","a":"Zn(OH)2","s":0,"m":0},{"q":"Fe2+に塩基を加えると生じる緑白色沈殿は【 】。","a":"Fe(OH)2","s":0,"m":0},{"q":"Fe3+ + 3OH^- → 【 】 + H2O","a":"FeO(OH)","s":0,"m":0},{"q":"FeO(OH)は【 】色の沈殿。","a":"赤褐","s":0,"m":0},{"q":"Cu2+ + 2OH^- → 【 】","a":"Cu(OH)2","s":0,"m":0},{"q":"Cu(OH)2は【 】色の沈殿。","a":"青白","s":0,"m":0},{"q":"2Ag+ + 2OH^- → 【 】 + H2O","a":"Ag2O","s":0,"m":0},{"q":"Ag2Oは【 】色の沈殿。","a":"褐","s":0,"m":0},{"q":"Al(OH)3 + OH^- → 【 】 (過剰のNaOH水溶液で溶ける錯イオン)","a":"[Al(OH)4]^-","s":0,"m":0},{"q":"Zn(OH)2 + 2OH^- → 【 】","a":"[Zn(OH)4]^2-","s":0,"m":0},{"q":"Zn(OH)2 + 4NH3 → 【 】 + 2OH^-","a":"[Zn(NH3)4]^2+","s":0,"m":0},{"q":"Cu(OH)2 + 4NH3 → 【 】 + 2OH^-","a":"[Cu(NH3)4]^2+","s":0,"m":0},{"q":"Ag2O + H2O + 4NH3 → 2【 】 + 2OH^-","a":"[Ag(NH3)2]^+","s":0,"m":0},{"q":"FeO(OH)は過剰のNaOH水溶液にも、過剰のNH3水にも溶け【 】。","a":"ない","s":0,"m":0},{"q":"アルカリ土類金属イオンを含む水溶液は、炭酸イオンと反応して、CaCO3, BaCO3などの炭酸塩の【 】色の沈殿を生成する。","a":"白","s":0,"m":0},{"q":"これらの沈殿は強酸に溶け、【 】を発生する。","a":"二酸化炭素CO2","s":0,"m":0},{"q":"Ca2+に希硫酸を加えると生じる白色沈殿は【 】。","a":"CaSO4","s":0,"m":0},{"q":"Ba2+に希硫酸を加えると生じる白色沈殿は【 】。","a":"BaSO4","s":0,"m":0},{"q":"Pb2+に希硫酸を加えると生じる白色沈殿は【 】。","a":"PbSO4","s":0,"m":0},{"q":"何種類かの金属イオンの混合水溶液から、各金属イオンを分離し、その種類を確認する操作を金属イオンの【 】という。","a":"系統分離","s":0,"m":0}]},{"t":"芳香族アミンとアゾ化合物","p":"29/34ページ・30/34ページ","qs":[{"q":"アンモニアの水素原子を炭化水素基で置き換えた化合物を【 】という。","a":"アミン","s":0,"m":0},{"q":"置換基が脂肪族の炭化水素基のアミンを【 】という。","a":"脂肪族アミン","s":0,"m":0},{"q":"【 】C6H5NH2のように、ベンゼン環の炭素原子に窒素原子が直接結合した構造をもつアミン。(③に入る物質名)","a":"アニリン","s":0,"m":0},{"q":"ベンゼン環の炭素原子に窒素原子が直接結合した構造をもつアミンを【 】という。","a":"芳香族アミン","s":0,"m":0},{"q":"アミンは【 】性を示す有機化合物である。","a":"塩基","s":0,"m":0},{"q":"ニトロベンゼンをスズSn(または鉄Fe)と濃塩酸HClで還元し、【 】とする。","a":"アニリン塩酸塩","s":0,"m":0},{"q":"アニリンは、さらし粉水溶液によって酸化され、【 】色に呈色する。","a":"赤紫","s":0,"m":0},{"q":"アニリンを硫酸酸性の二クロム酸カリウム水溶液で酸化すると、水に不溶の黒色物質(=【 】)を生じる。","a":"アニリンブラック","s":0,"m":0},{"q":"アニリンは弱い【 】性を示す。","a":"塩基","s":0,"m":0},{"q":"アニリンは塩酸には塩(=【 】)を生じて溶ける。","a":"アニリン塩酸塩","s":0,"m":0},{"q":"アニリンに無水酢酸を作用させると、アミノ基がアセチル化され【 】が生成する。","a":"アセトアニリド","s":0,"m":0},{"q":"アセトアニリドのように、分子内に【 】結合-NH-CO-をもつ化合物をアミドという。(⑫に入る語)","a":"アミド","s":0,"m":0},{"q":"アミドを加水分解すると、もとのアミンと【 】が得られる。","a":"カルボン酸","s":0,"m":0},{"q":"アニリンの希塩酸水溶液を氷冷しながら亜硝酸ナトリウム水溶液を加えると、【 】が得られる。","a":"塩化ベンゼンジアゾニウム","s":0,"m":0},{"q":"芳香族アミンからR-N+≡Nの構造をもつジアゾニウム塩が生成する反応を【 】という。","a":"ジアゾ化","s":0,"m":0},{"q":"塩化ベンゼンジアゾニウムは、温度が上がると分解し、窒素を発生して【 】を生じる。","a":"フェノール","s":0,"m":0}]},{"t":"芳香族化合物の分離","p":"31/34ページ","qs":[{"q":"芳香族化合物は、一般に水に溶け【 】く、ジエチルエーテルなど有機溶媒に溶け(②)い。","a":"にく","s":0,"m":0},{"q":"芳香族化合物は有機溶媒には溶け【 】い。","a":"やす","s":0,"m":0},{"q":"化合物が酸や塩基の場合、塩基や酸の水溶液を加えると中和されて塩となり、水に溶け【 】くなる。","a":"やす","s":0,"m":0},{"q":"芳香族カルボン酸は炭酸よりも【 】い酸である。","a":"強","s":0,"m":0},{"q":"フェノールは炭酸よりも【 】い酸である。","a":"弱","s":0,"m":0},{"q":"酸の強さ:塩酸・硫酸>【 】>炭酸(CO2+H2O)>(⑦)","a":"カルボン酸","s":0,"m":0},{"q":"酸の強さ:塩酸・硫酸>カルボン酸>炭酸(CO2+H2O)>【 】","a":"フェノール","s":0,"m":0},{"q":"塩基の強さ:水酸化ナトリウム水溶液>【 】","a":"アミン","s":0,"m":0}]}];
 //CORE
@@ -113,9 +167,9 @@ const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;',
 const ls=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}};
 let sel,S,comp=false;
 try{sel=new Set(JSON.parse(ls('sel')||'null')||DATA.map((_,i)=>i))}catch(e){sel=new Set(DATA.map((_,i)=>i))}
-const show=id=>{['s1','s2','s3'].forEach(s=>$('#'+s).hidden=s!==id);scrollTo(0,0)};
+const show=id=>{['s1','s2','s3'].forEach(s=>$('#'+s).hidden=s!==id);scrollTo(0,0);document.body.classList.toggle('dopa',D.on&&id!=='s1');document.body.classList.toggle('play',D.on&&id==='s2');fit();if(id!=='s2'){D.run=false;D.bd=0;$('#hud').hidden=$('#bm').hidden=$('#ib').hidden=true}};
 function renderList(){
- $('#list').innerHTML=DATA.map((u,i)=>`<label class="unit"><input type="checkbox" data-i="${i}"${sel.has(i)?' checked':''}><span><b>${esc(u.t)}</b><small>${esc(u.p)}</small></span><span class="n">${u.qs.length}問</span></label>`).join('');
+ $('#list').innerHTML=DATA.map((u,i)=>`<label class="unit"><input type="checkbox" data-i="${i}"${sel.has(i)?' checked':''}><span><b>${esc(u.t)}</b><small>${esc(u.p)}${rec(u.t)}</small></span><span class="n">${u.qs.length}問</span></label>`).join('');
  upd();
 }
 function upd(){
@@ -131,7 +185,7 @@ function start(){
  [...sel].sort((a,b)=>a-b).forEach(i=>DATA[i].qs.forEach((q,k)=>all.push({...q,id:i+'-'+k,u:DATA[i].t})));
  if(!all.length)return;
  S={n:all.length,q:$('#rnd').checked?shuf(all.slice()):all.slice(),done:new Set(),miss:{},first:0,all,cur:null,ans:false};
- show('s2');next();
+ dinit();show('s2');D.on?dstart(next):next();
 }
 function fillQ(q,txt,cls){let k=0;return esc(fmt(q.q)).replace(/【[^】]*】/g,()=>k++?'<span class="bk">　　　</span>':`<span class="bk ${cls||''}">${txt?esc(fmt(txt)):'　　　'}</span>`)}
 function prog(){const d=S.done.size;$('#pb').style.width=d/S.n*100+'%';$('#st1').textContent=`正解済み ${d} / ${S.n}`;$('#st2').textContent=`残り ${S.n-d}問`}
@@ -142,21 +196,21 @@ function next(){
  $('#chip').textContent=q.u;$('#qt').innerHTML=fillQ(q);
  $('#fb').hidden=true;$('#b2').hidden=true;$('#b1').hidden=false;
  A.readOnly=false;A.value='';A.placeholder=q.m?'すべて「、」で区切って入力':'答えを入力';
- prog();A.focus({preventScroll:true});
+ prog();(D.on&&COARSE)||A.focus({preventScroll:true});D.on&&bs();
 }
 function reveal(ok,giveup){
- const q=S.cur;S.ans=true;
+ const q=S.cur;if(!q||S.ans)return;S.ans=true;D.on&&(ok?yay():boo(giveup),D.bd=0,D.bomb=0,$('#bm').hidden=true);
  if(ok){S.done.add(q.id);if(!S.miss[q.id])S.first++}
  else{S.miss[q.id]=(S.miss[q.id]||0)+1;const L=S.q.length,m=Math.min(3,L);S.q.splice(m+Math.random()*(L-m+1)|0,0,q)}
  $('#qt').innerHTML=fillQ(q,q.a,ok?'ok':'ng');
  const f=$('#fb');f.className='fb '+(ok?'ok':'ng');
  f.innerHTML=`<b>${ok?'正解!':giveup?'答え':'不正解'}</b>`+(ok?'':`<p>答え: <b>${esc(fmt(q.a))}</b></p><p>あとでまた出題します</p>`)+(q.s?'<p>※この答えは教科書から補ったものです。念のため確認を</p>':'');
- f.hidden=false;A.readOnly=true;A.blur();$('#b1').hidden=true;$('#b2').hidden=false;$('#ov').hidden=ok||giveup;
+ f.hidden=false;A.readOnly=true;A.blur();$('#b1').hidden=true;$('#b2').hidden=false;$('#ov').hidden=ok||giveup||D.on;
  prog();
 }
 function submit(){
  if(S.ans)return next();
- const v=A.value.trim();if(v)reveal(judge(S.cur,v),false);
+ const v=A.value.trim();if(v&&S.cur)reveal(judge(S.cur,v),false);
 }
 $('#ok').onclick=submit;$('#nx').onclick=next;
 $('#dk').onclick=()=>reveal(false,true);
@@ -166,10 +220,11 @@ $('#ov').onclick=()=>{
  $('#ov').hidden=true;prog();
 };
 function result(){
- show('s3');
+ D.on&&(D.fin=el());show('s3');
  const ms=S.all.filter(q=>S.miss[q.id]).sort((a,b)=>S.miss[b.id]-S.miss[a.id]);
  $('#rs').innerHTML=`<div class="g"><div><b>${S.n}</b>出題数</div><div><b>${S.first}</b>一発正解</div><div><b>${ms.length}</b>間違えた問題</div></div>`+
  (ms.length?'<h2>間違えた問題(多い順)</h2>'+ms.map(q=>`<div class="card"><span class="chip">${esc(q.u)}・${S.miss[q.id]}回</span><p class="q" style="font-size:15px">${fillQ(q,q.a,'ok')}</p></div>`).join(''):'<p>全問、ミスなしでクリア!</p>');
+ D.on&&dres();
 }
 A.addEventListener('compositionstart',()=>comp=true);
 A.addEventListener('pointerup',()=>{const v=window.visualViewport;if(document.activeElement===A&&!A.readOnly&&v&&v.height>innerHeight-80){A.blur();A.focus()}});
@@ -189,5 +244,175 @@ $('#kb').addEventListener('pointerdown',e=>{
  if(k==='⌫'){if(s===t&&s>0)s--;A.setRangeText('',s,t,'end')}else A.setRangeText(k,s,t,'end');
 });
 $('#go').onclick=start;$('#again').onclick=start;$('#re').onclick=()=>show('s1');$('#back').onclick=()=>show('s1');
+
+//DOPA
+const D={on:false,sc:0,cb:0,mx:0,pen:0,bd:0,t0:0,lim:60,run:false,to:0,last:0,k:0,rule:'ta',bt:20,fin:0};
+const R=a=>a[Math.random()*a.length|0],vib=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
+let AC;
+function au(){if(!D.on||!$('#snd').checked)return null;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume()}catch(e){return null}return AC}
+function tn(f,t,d,ty,v,f2){const c=au();if(!c)return;const T=c.currentTime+t,o=c.createOscillator(),g=c.createGain();o.type=ty||'square';o.frequency.setValueAtTime(f,T);if(f2)o.frequency.exponentialRampToValueAtTime(f2,T+d);g.gain.setValueAtTime(v||.12,T);g.gain.exponentialRampToValueAtTime(.001,T+d);o.connect(g);g.connect(c.destination);o.start(T);o.stop(T+d)}
+function nz(d,v,fq){const c=au();if(!c)return;const n=c.sampleRate*d|0,b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=(Math.random()*2-1)*(1-i/n);const o=c.createBufferSource(),g=c.createGain(),f=c.createBiquadFilter();f.type='lowpass';f.frequency.value=fq;o.buffer=b;g.gain.value=v;o.connect(f);f.connect(g);g.connect(c.destination);o.start()}
+const SC=[0,4,7,12,16,19,24,28,31];
+function sGood(c){const n=Math.min(4+c,9);for(let i=0;i<n;i++){const f=392*2**(SC[i]/12);tn(f,i*.055,.2,'square',.16);tn(f*2,i*.055,.2,'sawtooth',.1);tn(f/2,i*.055,.2,'triangle',.2)}tn(2093,n*.055,.7,'triangle',.3);tn(160,0,.3,'sine',.6,40);nz(.35,.5,7000);if(c>=3)nz(.6,.7,2500);if(c>=5)sBoom()}
+const sBad=()=>{nz(.6,.8,600);tn(300,0,1,'sawtooth',.3,60);tn(200,.3,.9,'square',.18,40);tn(120,.5,.8,'sawtooth',.25,30)};
+const sBoom=()=>{nz(1.6,1,1500);nz(.8,.8,5000);tn(150,0,1.2,'sawtooth',.4,20);tn(60,0,1.2,'sine',.8,20)};
+const cv=$('#fx'),cx=cv.getContext('2d');let P=[],raf=0;
+function rsz(){cv.width=innerWidth;cv.height=innerHeight}rsz();addEventListener('resize',rsz);
+let RG=[];
+function ring(x,y,k){RG.push({x,y,r:10,k:k||'#fff',l:30});if(!raf)raf=requestAnimationFrame(lp)}
+function burst(x,y,n,o){o=o||{};for(let i=0;i<n;i++){const a=o.a!=null?o.a+(Math.random()-.5)*(o.sp||.6):Math.random()*6.283,sp=(o.s||9)*(.3+Math.random()*.9),l=(o.l||80)*(.6+Math.random()*.6);P.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,g:o.g==null?.3:o.g,l,m:l,r:o.r||6,c:o.e?R(o.e):`hsl(${Math.random()*360|0} 100% 60%)`,k:`hsl(${Math.random()*360|0} 100% 65%)`,e:!!o.e,w:Math.random()*6.28})}if(!raf)raf=requestAnimationFrame(lp)}
+function lp(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(p=>p.l-->0&&p.y<cv.height+60);for(const p of P){p.vy+=p.g;p.x+=p.vx;p.y+=p.vy;p.w+=.2;cx.globalAlpha=Math.min(1,p.l/p.m*2);if(p.e){cx.font='bold '+p.r*3+'px sans-serif';cx.fillStyle=p.k;cx.fillText(p.c,p.x,p.y)}else{cx.fillStyle=p.c;cx.save();cx.translate(p.x,p.y);cx.rotate(p.w);cx.fillRect(-p.r,-p.r/2,p.r*2,p.r);cx.restore()}}
+RG=RG.filter(g=>g.l-->0);for(const g of RG){g.r+=22;cx.globalAlpha=g.l/30;cx.strokeStyle=g.k;cx.lineWidth=10;cx.beginPath();cx.arc(g.x,g.y,g.r,0,6.283);cx.stroke()}
+cx.globalAlpha=1;raf=P.length||RG.length?requestAnimationFrame(lp):0}
+const cannon=()=>{burst(0,innerHeight,60,{a:-1,s:22,sp:.5});burst(innerWidth,innerHeight,60,{a:-2.14,s:22,sp:.5})};
+function shake(L){const a=['shk','zm','tl','iv','hu','sp'],m=$('main');m.classList.remove(...a);void m.offsetWidth;m.classList.add(R(a.slice(0,1+(L||0))))}
+function banner(t){const e=document.createElement('div');e.className='bn';e.textContent=t;e.style.color=R(CL);document.body.appendChild(e);setTimeout(()=>e.remove(),1100)}
+function fit(){const v=window.visualViewport,r=document.documentElement.style;r.setProperty('--vh',(v?v.height:innerHeight)+'px');r.setProperty('--vt',(v?v.offsetTop:0)+'px');document.body.classList.toggle('kbo',D.on&&!!v&&v.height<innerHeight*.78)}
+addEventListener('resize',fit);window.visualViewport&&['resize','scroll'].forEach(e=>visualViewport.addEventListener(e,fit));
+function flash(c){const f=$('#fl');f.style.background=c;f.classList.remove('go');void f.offsetWidth;f.classList.add('go')}
+function pop(t,c,dy){const e=document.createElement('div'),f=Math.min(22,92/[...t].length);e.className='pop';e.textContent=t;e.style.cssText=`color:${c};font-size:min(${f}vw,${f*7}px);--r:${Math.random()*20-10|0}deg;margin-top:${dy||0}px`;$('#pops').appendChild(e);setTimeout(()=>e.remove(),1200)}
+const PR=[[1,['正解!! 電子ゲット!!','完全燃焼!!','反応成功!!','沈殿ゲット!!']],[3,['反応速度MAX!!','触媒きた!!','活性化エネルギー超えた!!']],[5,['イオン化傾向、最強!!','ル・シャトリエも惚れる!!','モル濃度ぶち上げ!!']],[8,['ノーベル化学賞確定!!','アボガドロ級の連続正解!!','周期表を支配した!!']],[12,['錬金術師!!','賢者の石を錬成した!!','元素の王!!']]];
+function hud(b,L){$('#sc').textContent=D.sc.toLocaleString();$('#cb').textContent=D.cb>1?'🔥'+D.cb+' COMBO':'';if(b){const e=$('#sc');e.classList.remove('b');void e.offsetWidth;e.classList.add('b')}const c=$('#s2 .card');c.style.boxShadow=D.on&&L?`0 0 ${L*14}px ${L*3}px hsl(${Math.random()*360|0} 100% 55%)`:'';$('#hud').style.boxShadow=D.on&&L>=3?`0 0 ${L*5}px hsl(${Math.random()*360|0} 100% 60%)`:''}
+const EX=['電子ドバドバ!!','エンタルピー爆上がり!!','エントロピー増大!!','発熱反応!!ΔH<0','炎色反応!!','モル濃度ぶち上げ!!','平衡が右に傾いた!!'],CL=['#ffe600','#00ffd5','#ff4df0','#7dff4d','#ff9d00'],TN=['','','ON FIRE!!','UNSTOPPABLE!!','GODLIKE!!','超 化 学 神!!'];
+const ELM=['H','He','Li','Na','K','Fe','Cu','Au','Ag','Cl','O₂','H₂O','CO₂','NaCl','H⁺','OH⁻','e⁻','⚗️','🧪'];
+const TIPS=['アボガドロ定数は約6.02×10²³/mol','触媒は活性化エネルギーを下げるが、平衡は移動させない','ル・シャトリエの原理:変化を打ち消す向きに平衡が移動','電気陰性度が最大の元素はF(フッ素)','酸化=電子を失う、還元=電子を得る','pH=−log[H⁺]','水は4℃で密度が最大','理想気体の状態方程式 PV=nRT','ダイヤモンドと黒鉛は炭素の同素体','ヘンリーの法則:気体の溶解量は圧力に比例','水は水素結合のおかげで沸点が高い','貴ガスは最外殻が満たされ反応しにくい','イオン化傾向:Li K Ca Na Mg Al Zn Fe Ni Sn Pb (H) Cu Hg Ag Pt Au','強酸と強塩基の中和で、25℃なら pH 7'];
+const BOO={n:['活性化エネルギー足りてない!!','触媒が必要だ!!','ル・シャトリエ「平衡を戻せ!!」','不対電子かよ!!','共有結合がほどけた!!','酸化されてるぞ!!','中和されたな!!','失活した!!'],t:['半減期で記憶が消えた!!','水素に引火!! ポンッ!!','爆発性混合気体!!'],g:['しらんのかい!!','不活性ガスかお前は!!']};
+function say(t){if(!au())return;try{const u=new SpeechSynthesisUtterance(t.replace(/[!()ｷ━ﾟ∀.]/g,''));u.lang='ja-JP';u.pitch=1.8;u.rate=1.5;u.volume=1;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+function strobe(n,c){for(let i=0;i<n;i++)setTimeout(()=>flash(c||`hsl(${Math.random()*360|0} 100% 60%)`),i*70)}
+const W=()=>innerWidth,H=()=>innerHeight;
+const FXL=[
+ (c,L)=>{cannon();L>1&&cannon()},
+ (c,L)=>burst(W()/2,H()*.45,60+L*40,{s:14+L*3,e:ELM,r:9}),
+ (c,L)=>{for(let i=0;i<2+L;i++)setTimeout(()=>ring(W()/2,H()/2,R(CL)),i*120)},
+ (c,L)=>burst(W()/2,0,70+L*30,{a:1.57,sp:3.1,s:5,g:.25,e:ELM,r:9,l:120}),
+ (c,L)=>{for(let i=0;i<3+L;i++)setTimeout(()=>burst(Math.random()*W(),Math.random()*H()*.6,60,{l:60}),i*110)},
+ (c,L)=>banner(R(['REACTION!!','🧪 SYNTHESIS!!','⚡ CHAIN!!','H₂O!!','Au!!'])),
+ (c,L)=>burst(W()/2,H(),80+L*30,{a:-1.57,sp:1.2,s:22,g:.4,e:['🔥','⚡','💥'],r:10})
+],FXB=[
+ ()=>burst(W()/2,0,100,{a:1.57,sp:3.1,s:6,g:.35,e:['💀','😭','👻','🌧️'],r:9}),
+ ()=>{for(let i=0;i<3;i++)setTimeout(()=>ring(W()/2,H()/2,'#f33'),i*150)},
+ ()=>banner('MISS…'),
+ ()=>burst(W()/2,0,90,{a:1.57,sp:3.1,s:6,g:.35,e:['🧪','💧','☠️','H⁺','OH⁻'],r:9}),
+ ()=>{flash('#000');shake(4)}
+];
+let lastT=0;
+function yay(){
+ const c=++D.cb;D.mx=Math.max(D.mx,c);const L=Math.min(5,c/3|0),mu=(1+(c/3|0))*D.cm,l=D.bd?Math.max(0,(D.bd-Date.now())/1000):0;const lk=D.luck?(Math.random()<.5?4:.5):1,spd=Math.round(Math.max(0,1-(Date.now()-D.qs)/1000*D.tm/15)*150*D.sm);let pts=Math.round((100*mu+spd+Math.round(l*10))*(D.bomb?D.bm:1)*D.mul*lk);D.sc+=pts;const un=S.cur.u;D.us[un]=(D.us[un]||0)+pts;if(D.rule==='sv')D.lim+=4;
+ const w=R(PR.filter(p=>c>=p[0]).pop()[1]);
+ sGood(c);say(w);strobe(2+L*2);shake(L);vib([30,30,60,30,100]);if(L>=2)tn(200,0,.4,'sawtooth',.15,400*L);if(L>=4)sBoom();
+ pop(w,R(CL),-90);D.luck&&pop(lk>1?'🎰 大当たり ×4!!':'🎰 ハズレ ×0.5…',lk>1?'#ffe600':'#999',150);spd>20&&pop('⚡SPEED +'+spd,'#7dffff',20);pop('+'+pts+(mu>1?' ×'+mu:''),'#ffe600',85);if(L>=1)pop(R(EX),'#fff',-5);
+ if(D.bomb)pop('💣 解除!! ×'+D.bm,'#00ffd5',175);
+ burst(W()/2,H()/2,40+c*10,{s:12+L*3,e:ELM,r:8});
+ shuf(FXL.slice()).slice(0,1+(L+1>>1)).forEach(f=>f(c,L));
+ if(L>lastT&&TN[L])banner(TN[L]);lastT=L;
+ if(c%5===0){pop(c+' COMBO!!!','#ff3b3b',-190);for(let i=0;i<8;i++)setTimeout(()=>{burst(Math.random()*W(),Math.random()*H()*.6,80,{l:60});tn(400+Math.random()*800,0,.2,'sawtooth',.2,2000)},i*120);sBoom()}
+ if(D.bomb||Math.random()<.4){const t=R(TIPS);setTimeout(()=>$('#fb').insertAdjacentHTML('beforeend',`<p>💡 ${t}</p>`),0)}
+ hud(1,L);
+}
+function ex(){sBoom();strobe(5,'#fff');setTimeout(()=>flash('#f80'),150);shake(3);vib([400,100,400]);pop('💥 BOOM 💥','#ff7a00',-80);burst(W()/2,H()/2,300,{s:32,g:.2,e:['💥','🔥','💥','☄️','🧨'],r:12,l:100});burst(W()/2,H(),100,{a:-1.57,sp:2,s:26,e:['🔥','💥'],r:10})}
+function boo(g){
+ const c=D.cb;D.cb=0;lastT=0;if(INV.some(e=>IM[e].b==='shield')){useA('shield');D.to=0;D.cb=c;pop('🛡️ 化学バリア発動!!','#38bdf8',-60);strobe(3,'#38bdf8');ring(W()/2,H()/2,'#38bdf8');sGood(2);return}if(!D.np){D.pen+=5;if(D.rule==='sv')D.lim-=5}if(D.gam)D.sc>>=1;if(D.mp)D.sc=Math.max(0,D.sc-D.mp);
+ const w=R(D.to?BOO.t:g?BOO.g:BOO.n);
+ sBad();say(w);strobe(4,'#f00');shake(1);vib([200,60,200,60,300]);
+ pop(w,'#ff3b3b',-80);pop(R(['終わった…','やっちまった!!','絶望!!','😭😭😭']),'#fff',0);
+ pop(D.rule==='sv'?'-5秒':'+5秒ペナルティ','#ffb4b4',85);
+ if(c>=3)pop('COMBO BREAK… ('+c+')','#bbb',-170);
+ if(D.bomb&&!D.to)ex();
+ shuf(FXB.slice()).slice(0,2).forEach(f=>f());
+ const t=R(TIPS);setTimeout(()=>$('#fb').insertAdjacentHTML('beforeend',`<p>💡 ${t}</p>`),0);
+ if(D.die)setTimeout(()=>{if(D.run){pop('☠️ 一撃必殺…','#f00');result()}},1500);D.to=0;hud(0,0);
+}
+function boom(){D.bd=0;D.to=1;ex();setTimeout(()=>{if(!S.ans)reveal(false,true)},50)}
+const el=()=>(Date.now()-D.t0)/1000*D.tm+D.pen,rem=()=>D.lim-(Date.now()-D.t0)/1000*D.tm;
+function bs(){const b=$('#bm');D.qs=Date.now();D.bomb=(D.ab||(D.asked++>0&&Math.random()<.28))?1:0;
+ if(D.bomb){D.bd=Date.now()+D.bt*1000;D.last=0;b.hidden=false;b.classList.remove('dg');pop('💣 BOMB!! 💣','#ff3b3b',-100);pop(D.bt+'秒以内に答えろ!!','#fff',0);for(let i=0;i<4;i++)tn(i%2?1320:880,i*.15,.15,'sawtooth',.25);flash('#f00');shake();vib([100,50,100,50,300]);say('爆弾だ!! 急げ!!')}
+ else{D.bd=0;b.hidden=true}}
+const THK=['考えろ!!','電子の動きを読め!!','モルを数えろ!!','教科書を思い出せ!!','平衡を思い出せ!!','周期表を脳内に!!','手が止まってるぞ!!','ビーカーが泡立ってる…'];
+const IDL=[()=>burst(Math.random()*W(),H(),25,{a:-1.57,sp:1.5,s:12,g:.2,e:ELM,r:7}),()=>pop(R(THK),R(CL),R([-250,250])),()=>ring(Math.random()*W(),Math.random()*H(),R(CL)),()=>tn(500+Math.random()*900,0,.12,'square',.08,2000),()=>flash('#ffffff33'),()=>shake(1)];
+function tk(){
+ if(!D.on||!D.run)return;const now=Date.now();
+ $('#tm').textContent=D.rule==='ta'?'⏱ '+el().toFixed(1)+'s':'⏳ '+Math.max(0,rem()).toFixed(1)+'s';
+ if(D.rule==='sv'&&rem()<=0){D.fin=0;pop('TIME UP!!','#ff3b3b');sBoom();shake(2);return result()}
+ if(!S.ans&&S.cur){const q=(now-D.qs)/1000;
+  if(now-D.hb>Math.max(330,800-q*20)){D.hb=now;tn(70,0,.18,'sine',.6,35)}
+  if(now-D.id>1500){D.id=now;R(IDL)()}}
+ if(D.bd){const l=(D.bd-now)/1000/D.tm,f=Math.max(0,l/D.bt),n=Math.ceil(l);$('#bmf').style.width=f*100+'%';$('#bmf').style.background=`hsl(${f*120} 90% 50%)`;$('#bmt').textContent=n;$('#bm').classList.toggle('dg',l<=5);if(l<=5&&n!==D.last){D.last=n;tn(1200,0,.06,'square',.1)}if(l<=0)boom()}
+}
+setInterval(tk,100);
+function dinit(){
+ D.on=$('#dp').checked;
+ Object.assign(D,{sc:0,cb:0,mx:0,pen:0,bd:0,run:false,to:0,rule:$('#rl').value,bt:12,lim:60,asked:0,mul:1,sm:1,tm:1,ab:0,die:0,np:0,act:[],us:{},bomb:0,qs:0,hb:0,id:0,cm:1,bm:3,gam:0,luck:0,mp:0});
+ if(D.on){INV=INV.map(id=>{const i=IM[id];if(i.k!=='P')return id;D.act.push(i);ap[i.b]();return i.nx}).filter(Boolean);svI();D.act.forEach((i,k)=>setTimeout(()=>pop(i.e+' '+i.n+' 発動!!',RC[i.r],-200+k*60),500+k*250))}
+ if(D.on){au();$('#ib').hidden=false;rib();$('#hud').hidden=false;$('#bm').hidden=true;hud();$('#tm').textContent='';$('#b2').hidden=true;$('#b1').hidden=false;$('#fb').hidden=true;$('#qt').textContent='';A.value=''}
+}
+function dstart(cb){const k=++D.k;['3','2','1','GO!!!'].forEach((t,i)=>setTimeout(()=>{if(D.k!==k||$('#s2').hidden)return;pop(t,i<3?'#fff':'#ffe600');tn(i<3?660:1320,0,.25,'square',.15);if(i===3){cannon();flash('#fff');shake();D.t0=Date.now();D.run=true;cb()}},i*700))}
+function dres(){
+ const acc=S.first/S.n,rk=acc>=.95?'S':acc>=.8?'A':acc>=.6?'B':'C',ta=D.rule==='ta',key='best_'+[...sel].join(',')+D.rule,prev=+ls(key)||0,val=ta?D.fin:D.sc,nr=ta?(!prev||val<prev):val>prev;
+ if(nr)ls(key,val);const ur=Object.keys(D.us).map(u=>{const k='us_'+u,pv=+ls(k)||0,n=D.us[u]>pv;if(n)ls(k,D.us[u]);return `<div style="font-size:14px">${esc(u)}: <b style="font-size:16px">${D.us[u].toLocaleString()}</b>${n?' 🏆NEW':''}</div>`}).join('');
+ $('#rs').insertAdjacentHTML('afterbegin',`<div class="card dr"><div class="rk">${rk}</div><div>SCORE <b>${D.sc.toLocaleString()}</b></div><div>最大コンボ <b>${D.mx}</b></div><div>${ta?'タイム <b>'+D.fin.toFixed(1)+'秒</b>(ペナルティ込)':S.done.size+'問正解'}</div><div>${ur}</div><div>${nr?'🏆 NEW RECORD!!':prev?'ベスト '+(ta?prev.toFixed(1)+'秒':prev.toLocaleString()):''}</div></div>`);
+ pop(nr?'NEW RECORD!!!':'RANK '+rk,'#ffe600');sGood(12);itemUI(rk);renderList();rinv();
+ const n=rk==='S'?14:rk==='A'?8:4;for(let i=0;i<n;i++)setTimeout(()=>{cannon();burst(Math.random()*innerWidth,Math.random()*innerHeight*.5,70,{l:70});if(i%3===0)sBoom()},i*300);
+}
+
+//ITEMS
+const COARSE=matchMedia('(pointer:coarse)').matches;
+const RN=['コモン','レア','エピック','レジェンド'],RC=['#9aa5a8','#38bdf8','#c084fc','#fbbf24'];
+const IT=[
+{id:'x15',n:'スコア1.5倍',e:'✨',r:0,k:'P',d:'次の1プレイのスコアが1.5倍'},
+{id:'spd',n:'早押し2倍',e:'⚡',r:0,k:'P',d:'次の1プレイ、スピードボーナスが2倍'},
+{id:'hint',n:'1文字目ヒント',e:'🔍',r:0,k:'U',d:'プレイ中に使うと答えの1文字目が見える。使うと消える'},
+{id:'time',n:'時間ブースト',e:'⏰',r:0,k:'U',d:'プレイ中に使用。サバイバルは+15秒、タイムアタックはペナルティ-10秒、爆弾は+10秒'},
+{id:'x2',n:'スコア2倍',e:'💎',r:1,k:'P',d:'次の1プレイのスコアが2倍'},
+{id:'bomb',n:'爆弾祭り',e:'💣',r:1,k:'P',d:'次の1プレイ、爆弾が毎回出る。ただし制限時間が10秒伸びる'},
+{id:'shield',n:'化学バリア',e:'🛡️',r:1,k:'A',d:'ミス1回を自動で無効化(コンボ維持)。発動まで持ち越し'},
+{id:'skip',n:'スキップ',e:'⏭️',r:1,k:'U',d:'プレイ中に使うと、その問題を正解扱いにする'},
+{id:'x3',n:'時間加速',e:'⏳',r:2,k:'P',d:'次の1プレイ、時間が2倍速で進む代わりにスコア3倍'},
+{id:'st5',n:'コンボ5スタート',e:'🔥',r:2,k:'P',d:'次の1プレイを最初からコンボ5で開始'},
+{id:'x5',n:'一撃必殺',e:'☠️',r:3,k:'P',d:'次の1プレイ、スコア5倍。ただし1ミスで即終了'},
+{id:'gold',n:'賢者の石',e:'🏆',r:3,k:'P',d:'次の1プレイ、スコア3倍+ミスのペナルティ無し'}];
+IT.push(
+{id:'gam',n:'ギャンブラー',e:'🎲',r:1,k:'P',d:'次の1プレイ、スコア4倍。ただしミスするたびにスコアが半分になる'},
+{id:'bh',n:'爆弾ハンター',e:'🧨',r:1,k:'P',d:'次の1プレイ、爆弾問題の解除ボーナスが3倍→6倍'},
+{id:'luck',n:'運試し',e:'🎰',r:2,k:'P',d:'次の1プレイ、正解のたびに50%で得点×4、50%で×0.5'},
+{id:'sud',n:'サドンデス',e:'⚔️',r:2,k:'P',d:'次の1プレイ、スコア6倍。ただし爆弾が毎回出て制限時間は7秒'},
+{id:'blz',n:'電撃戦',e:'🌩️',r:2,k:'P',d:'次の1プレイ、時間が3倍速で進む代わりにスコア5倍'},
+{id:'cm2',n:'コンボ増幅',e:'📈',r:2,k:'P',d:'次の1プレイ、コンボ倍率が2倍'},
+{id:'bk',n:'破産覚悟',e:'💸',r:3,k:'P',d:'次の1プレイ、スコア8倍。ただしミスで-300点'},
+{id:'hell',n:'地獄の化学',e:'👹',r:3,k:'P',d:'次の1プレイ、スコア10倍。爆弾が毎回(7秒)で、1ミスで即終了'});
+IT.forEach(i=>i.b=i.id);
+const mk=(b,n,r)=>{const o=IT.find(i=>i.id===b);for(let c=n;c>0;c--)IT.push({...o,id:b+c,b,r,n:o.n+'×'+c+'回',nx:c>1?b+(c-1):null,d:o.d+'(全'+n+'回分)'})};
+mk('hint',3,1);mk('time',3,1);mk('x15',5,1);mk('shield',3,2);mk('skip',2,2);mk('x2',3,2);mk('st5',3,2);mk('bomb',2,2);mk('x3',2,3);
+IT.forEach(i=>i.top=!IT.some(x=>x.nx===i.id));
+const IM=Object.fromEntries(IT.map(i=>[i.id,i]));
+const ap={x15:()=>D.mul*=1.5,spd:()=>D.sm=2,x2:()=>D.mul*=2,bomb:()=>{D.ab=1;D.bt=22},x3:()=>{D.tm=2;D.mul*=3},st5:()=>D.cb=5,x5:()=>{D.mul*=5;D.die=1},gold:()=>{D.mul*=3;D.np=1},gam:()=>{D.mul*=4;D.gam=1},bh:()=>D.bm=6,luck:()=>D.luck=1,sud:()=>{D.mul*=6;D.ab=1;D.bt=7},blz:()=>{D.tm=3;D.mul*=5},cm2:()=>D.cm=2,bk:()=>{D.mul*=8;D.mp=300},hell:()=>{D.mul*=10;D.ab=1;D.bt=7;D.die=1}};
+let INV=[],selI=-1;try{INV=JSON.parse(ls('inv')||'[]').filter(id=>IM[id]).slice(0,4)}catch(e){}
+const svI=()=>ls('inv',JSON.stringify(INV)),rec=t=>{const v=$('#dp').checked&&+ls('us_'+t);return v?' ・🏆'+v.toLocaleString():''},dec=x=>{const i=IM[INV[x]];if(i.nx)INV[x]=i.nx;else INV.splice(x,1);svI();rib()},useA=b=>dec(INV.findIndex(e=>IM[e].b===b));
+function rinv(){$('#inv').innerHTML='<b>🎒 持ち物 '+INV.length+'/4</b><div class="invr">'+[0,1,2,3].map(k=>{const i=IM[INV[k]];return i?`<button class="it r${i.r}${k===selI?' sel':''}" data-k="${k}" style="--c:${RC[i.r]}"><span>${i.e}</span><b>${i.n}</b><small>${RN[i.r]}</small></button>`:'<button class="it" disabled><small>空き</small></button>'}).join('')+'</div>'+(IM[INV[selI]]?`<p class="hint">${IM[INV[selI]].d}</p>`:'<p class="hint">タップで選択→捨てる。スコア系は次のプレイで自動消費、ヒント等は使うまで残る。</p>');$('#dsc').disabled=!IM[INV[selI]]}
+$('#inv').onclick=e=>{const b=e.target.closest('button[data-k]');if(!b)return;selI=selI===+b.dataset.k?-1:+b.dataset.k;rinv()};
+$('#dsc').onclick=()=>{if(IM[INV[selI]]){INV.splice(selI,1);selI=-1;svI();rinv();sBad()}};
+function rib(){$('#ib').innerHTML=D.act.map(i=>`<span class="ac" title="${i.n}">${i.e}</span>`).join('')+INV.map((id,x)=>{const i=IM[id];return i.k==='U'?`<button class="ibtn" data-x="${x}" style="border-color:${RC[i.r]}">${i.e}${i.n}</button>`:i.k==='A'?`<span class="ac" title="${i.n}">${i.e}</span>`:''}).join('')}
+$('#ib').onclick=e=>{const b=e.target.closest('button');b&&useItem(+b.dataset.x)};
+function useItem(ix){const i=IM[INV[ix]],id=i&&i.b;if(!i||!D.run||!S.cur||S.ans)return;
+ if(id==='hint')A.placeholder='ヒント:「'+[...fmt(S.cur.a)][0]+'」から始まる';
+ else if(id==='time'){if(D.rule==='sv')D.lim+=15;else D.pen=Math.max(0,D.pen-10);if(D.bd)D.bd+=10000}
+ dec(ix);pop(i.e+' '+i.n,RC[i.r]);sGood(2);ring(W()/2,H()/2,RC[i.r]);strobe(2,RC[i.r]);
+ if(id==='skip')reveal(true,false)}
+function roll(b){const w=[60-8*b,28+3*b,10+4*b,2+b];let r=Math.random()*w.reduce((a,x)=>a+x),k=0;while(k<3&&r>=w[k])r-=w[k++];return R(IT.filter(i=>i.r===k&&i.top))}
+function itemUI(rk){const b=rk==='S'?3:rk==='A'?2:rk==='B'?1:0,o=[];while(o.length<3){const i=roll(b);o.includes(i)||o.push(i)}
+ const d=document.createElement('div');d.id='itm';d.className='card';
+ d.innerHTML='<b>🎁 アイテムを1つ選べ!</b><div class="invr">'+o.map(i=>`<button class="it r${i.r}" data-id="${i.id}" style="--c:${RC[i.r]}"><span>${i.e}</span><b>${i.n}</b><small>${RN[i.r]}</small><em>${i.d}</em></button>`).join('')+'</div><button id="skp">いらない</button>';
+ $('#rs .dr').after(d);
+ d.onclick=e=>{const k=e.target.closest('button');if(!k)return;if(k.id==='skp')return d.remove();const i=IM[k.dataset.id];if(INV.length<4)return got(i,d);
+  d.innerHTML=`<b>持ち物がいっぱい! ${i.e}${i.n} と入れ替えるものは?</b><div class="invr">`+INV.map((id,x)=>`<button class="it r${IM[id].r}" data-x="${x}" style="--c:${RC[IM[id].r]}"><span>${IM[id].e}</span><b>${IM[id].n}</b></button>`).join('')+'</div><button id="skp">やめる</button>';
+  d.onclick=e2=>{const k2=e2.target.closest('button');if(!k2)return;if(k2.id==='skp')return d.remove();INV.splice(+k2.dataset.x,1);got(i,d)}}}
+function got(i,d){INV.push(i.id);svI();rinv();d.innerHTML=`<b>${i.e} ${i.n} を入手!! (${RN[i.r]})</b>`;sGood(4+i.r*3);say(RN[i.r]+'、ゲット');pop(i.e+' '+i.n,RC[i.r]);strobe(3+i.r*3,RC[i.r]);for(let k=0;k<=i.r;k++)setTimeout(cannon,k*250);if(i.r>=2)banner(i.r>2?'LEGENDARY!!':'EPIC!!');if(i.r===3)sBoom()}
+rinv();
+let nt=[];
+$('#none').addEventListener('click',()=>{const t=Date.now();nt=nt.filter(x=>t-x<2500);nt.push(t);if(nt.length<7)return;nt=[];
+ const on=!$('#dp').checked;$('#dp').checked=on;D.on=on;$('#dpl').hidden=$('#dopt').hidden=!on;
+ if(on){rinv();$('#all').click();au();sGood(12);sBoom();say('ドパガキモード、解放');pop('🔥 ドパガキモード 解放!! 🔥','#ffe600');strobe(6);shake();cannon();cannon();vib([100,50,100,50,300])}
+ else{pop('通常モードに戻る','#fff');renderList()}});
+A.addEventListener('input',()=>{if(!D.on||S.ans)return;const n=A.value.length,r=A.getBoundingClientRect(),ch=[...A.value].pop()||'⌫';tn(500+n*60,0,.07,'square',.12);tn(1000+n*90,.03,.07,'triangle',.1);vib(8);burst(r.left+Math.min(r.width-20,20+n*14),r.top,8+n,{a:-1.57,sp:2,s:9,g:.25,e:[ch,'H','O','e⁻'],r:8,l:50});A.classList.remove('jt');void A.offsetWidth;A.classList.add('jt');if(n%4===0){ring(r.left+r.width/2,r.top,R(CL));pop(R(['いいぞ!!','その調子!!','書けてる!!','手が止まらない!!']),R(CL),-230)}});
+$('#dp').checked=false;$('#dp').onchange=()=>$('#dopt').hidden=!$('#dp').checked;
 renderList();
 </script></body></html>
